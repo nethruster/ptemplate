@@ -5,7 +5,9 @@ require('./scss/index.scss');
 
 class App extends React.Component {
   render () {
-    return <p>ptemplate</p>;
+    return (
+      <p>ptemplate</p>
+    );
   }
 }
 

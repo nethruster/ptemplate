@@ -1,1 +1,3 @@
-@import 'reset';
+@import 'vars';  // Global App variables
+@import 'reset'; // CSS reset and default values
+@import 'utils'; // Common used utils
