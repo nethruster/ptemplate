@@ -161,6 +161,13 @@ html {
   svg:not(:root) {
     overflow: hidden;
   }
+
+  svg {
+    fill: currentColor;
+    max-width: 100%;
+    width: 24px;
+    height: auto;
+  }
   
   /* Forms
      ========================================================================== */
