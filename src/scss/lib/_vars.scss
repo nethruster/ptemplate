@@ -1,4 +1,12 @@
 :root {
-    --pt-main-background: #e6e9f0; /* fallback for old browsers */
-    --pt-main-background-gradient: linear-gradient(45deg,#e6e9f0,#eef1f5);
+    // Global params
+    --pt-main-background: #e6e9f0;
+    --pt-main-background-gradient: linear-gradient(45deg,#2c3540,#455260);
+
+    --base-br: 4px; // Base border radius
+
+    // Components
+    --pt-content-card-max-width: 1250px; // Content card max width
+    --pt-content-card-max-height: 650px; // Content card max height
+    --pt-content-card-background-gradient: linear-gradient(45deg,#e6e9f0,#eef1f5); // Content card background gradient
 }

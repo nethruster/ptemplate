@@ -4,6 +4,10 @@
   "description": "A personal website template",
   "repository": "https://github.com/nethruster/ptemplate.git",
   "author": "Nethruster <support@nethruster.com>",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack -p"
+  },
   "license": "MIT",
   "dependencies": {
     "react": "next",
