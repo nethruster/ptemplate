@@ -3,8 +3,39 @@
     height: 100%;
     max-width: var(--pt-content-card-max-width);
     max-height: var(--pt-content-card-max-height);
-    background-color: white;
-    background-image: var(--pt-content-card-background-gradient);
+    background-color: var(--pt-content-card-background);
     border-radius: var(--base-br);
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    &__header {
+        position: relative;
+        height: 300px;
+        background-color: var(--pt-content-card-header-background);
+        color: var(--pt-content-card-background);
+
+        &__background {
+            position: absolute;
+            fill: var(--pt-content-card-background);
+            bottom: 0;
+            width: 100%;
+            height: 3vw;
+        }
+
+        &__image {
+            img {
+                border-radius: 50%;
+                max-height: 130px;
+            }
+        }
+
+        &__title-name,
+        &__title-desc {
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        &__title-desc {
+            opacity: .7;
+        }
+    }
 }
