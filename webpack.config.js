@@ -18,6 +18,7 @@ const config = {
   },
   devServer: {
     host: 'localhost',
+    historyApiFallback: true,
     port: 3000,
     contentBase: './src',
     stats: 'minimal',
