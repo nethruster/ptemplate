@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Home extends React.Component {
+export default class Home extends React.PureComponent {
   render () {
     return (
         <div className="pt-content-card__header flex flex-dc flex-main-center">
