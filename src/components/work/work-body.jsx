@@ -8,7 +8,8 @@ export default class WorkBody extends React.PureComponent {
     return (
         <div className="pt-content-card__body flex flex-cross-center">
            <WorkFilters />
-           <div className="pt-content-card__body__work-items flex">
+           <div className="pt-content-card__body__work-items flex flex-sa">
+              <WorkItem />
               <WorkItem />
            </div>
         </div>
