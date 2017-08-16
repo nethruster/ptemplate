@@ -6,9 +6,9 @@ import Icon from '../partials/icon.jsx';
 
 export default class HomeBody extends React.PureComponent {
   render () {
-    const socialIcons = Object.keys(this.props.profile.social).map((e,i) => (
-        <a key={i} className="pt-content-card__body__social-icons__icon" href={this.props.profile.social[e]} target="_blank">
-            <Icon iconName={e} />
+    const socialIcons = this.props.profile.social.map((e,i) => (
+        <a key={i} className="pt-content-card__body__social-icons__icon" href={e.url} target="_blank">
+            <Icon iconName={e.iconName} />
         </a>
     ))
     return (
