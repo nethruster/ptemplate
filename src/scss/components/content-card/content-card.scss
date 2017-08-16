@@ -7,7 +7,9 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     overflow: hidden;
 
-    @import 'header';
+    @import 'home/header';
+    @import 'home/body';
 
-    @import 'body';
+    // Nav-bar header
+    @import 'header-nav';
 }

@@ -1,0 +1,28 @@
+&__header--nav {
+    height: 60px;
+    padding: 0 calc(var(--base-pm) * 2);
+
+    &__back-icon {
+        background-color: transparentize(#fff, .9);
+        border-radius: var(--base-br);
+        padding: calc(var(--base-pm) / 2);
+
+        svg {
+            width: 30px;
+        }
+    }
+
+    &__title {
+        flex: 2;
+
+        svg {
+            width: 32px;
+            margin-right: var(--base-pm);
+        }
+
+        h2 {
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+}
