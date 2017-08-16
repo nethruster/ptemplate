@@ -12,10 +12,10 @@
     --pt-content-card-background: #eef1f5; // Content card background
 
     --pt-content-card-header-background: #303a45; // Content card header/nav background colour
-}
 
-// Temp vars
-$checkbox-size: 20px;
-$checkbox-animation-ripple: 700ms;
-$checkbox-animation-check: 0.2s;
-$lightbg-text: rgba(0,0,0,0.84);
+    //Material Desing Ripple
+    --md-checkbox-size: 20px;
+    --md-checkbox-animation-ripple: 700ms;
+    --md-checkbox-animation-check: 0.2s;
+    --md-lightbg-text: rgba(0,0,0,0.84);
+}

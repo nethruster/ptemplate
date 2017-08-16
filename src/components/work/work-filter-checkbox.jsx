@@ -3,9 +3,9 @@ import React from 'react';
 export default class WorkFilterCheckbox extends React.PureComponent {
     render() {
         return (
-            <li className="checkbox">
+            <li className="md__checkbox">
                 <label className="pointer">
-                    <input type="checkbox" /><span className="checkbox-material"><span className="check"></span></span> {this.props.name}
+                    <input type="checkbox" /><span className="md__checkbox-material"><span className="md__checkbox-check"></span></span> {this.props.name}
                 </label>
             </li>
         );
