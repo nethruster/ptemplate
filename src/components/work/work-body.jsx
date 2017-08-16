@@ -3,7 +3,7 @@ import React from 'react';
 import WorkFilters from './work-filters.jsx';
 import WorkItem from './work-item.jsx';
 
-import {works} from "../../config";
+import { works } from "../../config";
 
 export default class WorkBody extends React.PureComponent {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class WorkBody extends React.PureComponent {
     var filters = {};
     works.forEach((work) => {
       work.categories.forEach((category) => {
-        if(!Object.keys(filters).includes(category)) {
+        if (!Object.keys(filters).includes(category)) {
           filters[category] = true
         }
       })
@@ -30,23 +30,24 @@ export default class WorkBody extends React.PureComponent {
   handleFilterChange(cat, value) {
     var filters = Object.assign({}, this.state.filters);
     filters[cat] = value;
-    this.setState({filters})
+    this.setState({ filters })
   }
   handleAllFilterChange(cat, value) {
     var filters = Object.assign({}, this.state.filters)
     Object.keys(this.state.filters).forEach((fil) => {
       filters[fil] = value;
     });
-    this.setState({filters});
+    this.setState({ filters });
   }
-  render () {
+  render() {
     return (
-        <div className="pt-content-card__body flex flex-cross-center">
-           <WorkFilters filters={this.state.filters} handleFilterChange={this.handleFilterChange} handleAllFilterChange={this.handleAllFilterChange}/>
-           <div className="pt-content-card__body__work-items flex">
-              <WorkItem />
-           </div>
+      <div className="pt-content-card__body flex flex-cross-center">
+        <WorkFilters filters={this.state.filters} handleFilterChange={this.handleFilterChange} handleAllFilterChange={this.handleAllFilterChange} />
+        <div className="pt-content-card__body__work-items flex flex-sa">
+          <WorkItem />
+          <WorkItem />
         </div>
+      </div>
     );
   }
 }
