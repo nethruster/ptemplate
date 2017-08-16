@@ -6,6 +6,11 @@ import Icon from '../partials/icon.jsx';
 
 export default class HomeBody extends React.PureComponent {
   render () {
+    const socialIcons = Object.keys(this.props.profile.social).map((e,i) => (
+        <a key={i} className="pt-content-card__body__social-icons__icon" href={this.props.profile.social[e]} target="_blank">
+            <Icon iconName={e} />
+        </a>
+    ))
     return (
         <div className="pt-content-card__body flex flex-dc flex-main-center">
             <div className="pt-content-card__body__icons flex flex-full-center flex-sa">
@@ -14,15 +19,7 @@ export default class HomeBody extends React.PureComponent {
                 <HomeButton iconTitle="Contact" iconName="message" />
             </div>
             <div className="pt-content-card__body__social-icons flex flex-full-center">
-                <div className="pt-content-card__body__social-icons__icon">
-                    <Icon iconName="twitter" />
-                </div>
-                <div className="pt-content-card__body__social-icons__icon">
-                    <Icon iconName="telegram" />
-                </div>
-                <div className="pt-content-card__body__social-icons__icon">
-                    <Icon iconName="github" />
-                </div>
+                {socialIcons}
             </div>
         </div>
     );

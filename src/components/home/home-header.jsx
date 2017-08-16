@@ -8,10 +8,10 @@ export default class Home extends React.PureComponent {
                 <polygon points="0,200 200,0 200,200"/>
             </svg>
             <div className="pt-content-card__header__image flex flex-main-center">
-                <img src="https://s-media-cache-ak0.pinimg.com/736x/a9/8d/33/a98d336578c49bd121eeb9dc9e51174d--adobe-illustrator-smileys.jpg" alt="User" />
+                <img src={this.props.profile.avatarUrl} alt="User" />
             </div>
-            <h1 className="pt-content-card__header__title-name ta-c">Guillem Arias</h1>
-            <p className="pt-content-card__header__title-desc ta-c">Front-end developer</p>
+            <h1 className="pt-content-card__header__title-name ta-c">{this.props.profile.fullname}</h1>
+            <p className="pt-content-card__header__title-desc ta-c">{this.props.profile.description}</p>
         </div>
     );
   }

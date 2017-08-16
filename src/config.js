@@ -1,3 +1,15 @@
+const profile = {
+    fullname : "Website Owner",
+    description: "FRONT-END DEVELOPER",
+    avatarUrl: "https://s-media-cache-ak0.pinimg.com/736x/a9/8d/33/a98d336578c49bd121eeb9dc9e51174d--adobe-illustrator-smileys.jpg",
+    social: {
+        //The key will be the svg Id in /src/assets/icons.svg
+        "twitter": "https://twitter.com/username",
+        "telegram": "https://t.me/username",
+        "github": "https://github.com/username"
+    }
+}
+
 const works = [
     {
         title: "Project Title #1",
@@ -28,5 +40,6 @@ const works = [
 ]
 
 export {
+    profile,
     works
 }
