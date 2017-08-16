@@ -85,22 +85,22 @@ input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:before
     animation: checkbox-on var(--md-checkbox-animation-check) forwards ease-out;
 }
 
-input[type=checkbox]:not(:checked) + .md__checkbox-material:before {
-    animation: rippleOff var(--md-checkbox-animation-ripple) forwards ease-out;
-}
+// input[type=checkbox]:not(:checked) + .md__checkbox-material:before {
+//     animation: rippleOff var(--md-checkbox-animation-ripple) forwards ease-out;
+// }
 
-input[type=checkbox]:checked + .md__checkbox-material:before {
-    animation: rippleOn var(--md-checkbox-animation-ripple) forwards ease-out;
-}
+// input[type=checkbox]:checked + .md__checkbox-material:before {
+//     animation: rippleOn var(--md-checkbox-animation-ripple) forwards ease-out;
+// }
 
 // Ripple effect on click
-input[type=checkbox]:not(:checked) + .md__checkbox-material .md__checkbox-check:after {
-    animation: rippleOff var(--md-checkbox-animation-ripple) forwards ease-out;
-}
+// input[type=checkbox]:not(:checked) + .md__checkbox-material .md__checkbox-check:after {
+//     animation: rippleOff var(--md-checkbox-animation-ripple) forwards ease-out;
+// }
 
-input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:after {
-    animation: rippleOn var(--md-checkbox-animation-ripple) forwards ease-out;
-}
+// input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:after {
+//     animation: rippleOn var(--md-checkbox-animation-ripple) forwards ease-out;
+// }
   
     // // Style for disabled inputs
     // input[type=checkbox][disabled]:not(:checked) ~ .md__checkbox-material .md__checkbox-check:before,
@@ -218,24 +218,24 @@ input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:after 
     }
 }
 
-@keyframes rippleOn {
-    0% {
-        opacity: 0.5;
-    }
+// @keyframes rippleOn {
+//     0% {
+//         opacity: 0.5;
+//     }
 
-    100% {
-        opacity: 0;
-        transform: scale(13,13);
-    }
-}
+//     100% {
+//         opacity: 0;
+//         transform: scale(13,13);
+//     }
+// }
 
-@keyframes rippleOff {
-    0% {
-        opacity: 0.5;
-    }
+// @keyframes rippleOff {
+//     0% {
+//         opacity: 0.5;
+//     }
 
-    100% {
-        opacity: 0;
-        transform: scale(13,13);
-    }
-}
+//     100% {
+//         opacity: 0;
+//         transform: scale(13,13);
+//     }
+// }

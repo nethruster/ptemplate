@@ -3,6 +3,10 @@
     height: 100%;
     flex-wrap: wrap;
     padding: calc(var(--base-pm) * 2);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 130px;
+    overflow: auto;
 
     &__item {
         background-color: #fff;
@@ -11,6 +15,13 @@
         border-radius: var(--base-br);
         overflow: hidden;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all .3s;
+        margin: var(--base-pm) 0;
+        justify-self: center;
+
+        &:only-child {
+            max-width: none;
+        }
 
         &__image {
             max-height: 80%;

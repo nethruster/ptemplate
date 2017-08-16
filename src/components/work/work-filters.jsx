@@ -16,16 +16,16 @@ export default class WorkFilters extends React.PureComponent {
         });
         return allFiltersChecked;
     }
-  render () {
-    const filters = Object.keys(this.props.filters).map((fil, i) =>  <WorkFilterItem key={i} name={fil} handleFilterChange={this.props.handleFilterChange} value={this.props.filters[fil]}/>)
-    return (
-        <div className="pt-content-card__body__work-filters">
-            <p>Categories</p>
-            <ul className="pt-content-card__body__work-filters__list flex flex-dc">
-                <WorkFilterItem name="All" value={this.allFiltersAreChecked()} handleFilterChange={this.props.handleAllFilterChange}/>
-                {filters}
-            </ul>
-        </div>
-    );
-  }
+    render () {
+        const filters = Object.keys(this.props.filters).map((filter, i) =>  <WorkFilterItem key={i} name={filter} handleFilterChange={this.props.handleFilterChange} value={this.props.filters[filter]}/>)
+        return (
+            <div className="pt-content-card__body__work-filters">
+                <p>Categories</p>
+                <ul className="pt-content-card__body__work-filters__list flex flex-dc">
+                    <WorkFilterItem name="All" value={this.allFiltersAreChecked()} handleFilterChange={this.props.handleAllFilterChange}/>
+                    {filters}
+                </ul>
+            </div>
+        );
+    }
 }

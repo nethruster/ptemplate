@@ -6,7 +6,7 @@ const profile = {
         //The key will be the svg Id in /src/assets/icons.svg
         "twitter": "https://twitter.com/username",
         "telegram": "https://t.me/username",
-        "github": "https://github.com/username"
+        "github": "https://github.com/username",
     }
 }
 
@@ -36,6 +36,19 @@ const works = [
         categories: ["Sample", "Freeware", "Go"],
         siteUrl: "amazing.project.com",
         sourceCodeUrl: "github.com/user/project"
+    },
+    {
+        title: "Project Title #3",
+        img: {
+            isSvg: true,
+            svgId: "exmaple",
+            //Only if not a svg
+            url: ""
+        },
+        description: "Lorem ipsum dolor sit amet, in nulla hendrerit ius, sed et congue graeci, qui id propriae accusata.",
+        categories: ["Wat", "Linux", "LoL"],
+        siteUrl: "amazing.project.es",
+        sourceCodeUrl: "github.com/user/:O"
     }
 ]
 
