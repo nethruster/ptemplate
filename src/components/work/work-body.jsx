@@ -15,6 +15,7 @@ export default class WorkBody extends React.PureComponent {
 
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.handleAllFilterChange = this.handleAllFilterChange.bind(this);
+    this.getFilteredWorkItems = this.getFilteredWorkItems.bind(this);
   }
   generateFilters() {
     var filters = {};
@@ -26,6 +27,19 @@ export default class WorkBody extends React.PureComponent {
       })
     })
     return filters
+  }
+  getFilteredWorkItems() {
+    return this.state.works.map((w, i) => {
+      var match = false;
+      w.categories.forEach((cat)=> {
+        if(this.state.filters[cat]) {
+          match = true;
+        }
+      })
+      if(match) {
+        return <WorkItem key={i} work={w}/>
+      }
+    });
   }
   handleFilterChange(cat, value) {
     var filters = Object.assign({}, this.state.filters);
@@ -44,8 +58,7 @@ export default class WorkBody extends React.PureComponent {
       <div className="pt-content-card__body flex flex-cross-center">
         <WorkFilters filters={this.state.filters} handleFilterChange={this.handleFilterChange} handleAllFilterChange={this.handleAllFilterChange} />
         <div className="pt-content-card__body__work-items flex flex-sa">
-          <WorkItem />
-          <WorkItem />
+          {this.getFilteredWorkItems()}
         </div>
       </div>
     );
