@@ -1,0 +1,9 @@
+&__work-filters {
+    height: 100%;
+    padding: calc(var(--base-pm) * 4) 0 0 calc(var(--base-pm) * 4);
+
+    p {
+        font-size: 1.1em;
+        font-weight: 400;
+    }
+}

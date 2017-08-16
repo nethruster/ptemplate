@@ -1,6 +1,7 @@
 &__header--nav {
     height: 60px;
     padding: 0 calc(var(--base-pm) * 2);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.16), 0 3px 12px rgba(0,0,0,0.23);
 
     &__back-icon {
         background-color: transparentize(#fff, .9);

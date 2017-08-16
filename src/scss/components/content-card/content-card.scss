@@ -8,8 +8,7 @@
     overflow: hidden;
 
     @import 'home/header';
-    @import 'home/body';
-
-    // Nav-bar header
+    
+    @import 'content-card-body';
     @import 'header-nav';
 }
