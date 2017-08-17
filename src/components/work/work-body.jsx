@@ -3,56 +3,70 @@ import React from 'react';
 import WorkFilters from './work-filters.jsx';
 import WorkItem from './work-item.jsx';
 
-import { works } from "../../config";
+import { projects } from "../../config";
 
 export default class WorkBody extends React.PureComponent {
   constructor(props) {
     super(props);
+
     this.state = {
       filters: this.generateFilters(),
-      works: works
-    }
+      projects: projects
+    };
 
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.handleAllFilterChange = this.handleAllFilterChange.bind(this);
     this.getFilteredWorkItems = this.getFilteredWorkItems.bind(this);
   }
+
   generateFilters() {
-    var filters = {};
-    works.forEach((work) => {
-      work.categories.forEach((category) => {
+    let filters = {};
+
+    projects.forEach((project) => {
+      project.categories.forEach((category) => {
         if (!Object.keys(filters).includes(category)) {
-          filters[category] = true
+          filters[category] = true;
         }
       })
     })
-    return filters
+
+    return filters;
   }
+
   getFilteredWorkItems() {
-    return this.state.works.map((w, i) => {
-      var match = false;
-      w.categories.forEach((cat)=> {
-        if(this.state.filters[cat]) {
+    return this.state.projects.map((project, i) => {
+      let match = false;
+
+      project.categories.forEach((category) => {
+        if (this.state.filters[category]) {
           match = true;
         }
       })
-      if(match) {
-        return <WorkItem key={i} work={w}/>
+
+      if (match) {
+        return <WorkItem key={i} work={project} />
       }
     });
   }
-  handleFilterChange(cat, value) {
-    var filters = Object.assign({}, this.state.filters);
-    filters[cat] = value;
-    this.setState({ filters })
-  }
-  handleAllFilterChange(cat, value) {
-    var filters = Object.assign({}, this.state.filters)
-    Object.keys(this.state.filters).forEach((fil) => {
-      filters[fil] = value;
-    });
+
+  handleFilterChange(category, value) {
+    let filters = Object.assign({}, this.state.filters);
+
+    filters[category] = value;
+
     this.setState({ filters });
   }
+
+  handleAllFilterChange(category, value) {
+    let filters = Object.assign({}, this.state.filters);
+
+    Object.keys(this.state.filters).forEach((filter) => {
+      filters[filter] = value;
+    });
+
+    this.setState({ filters });
+  }
+
   render() {
     return (
       <div className="pt-content-card__body flex flex-cross-center">

@@ -22,7 +22,7 @@ const profile = {
     ]
 }
 
-const works = [
+const projects = [
     {
         title: "Project Title #1",
         img: {
@@ -66,5 +66,5 @@ const works = [
 
 export {
     profile,
-    works
+    projects
 }

@@ -1,0 +1,20 @@
+@import 'home-button';
+
+&__social-icons {
+    flex: 1;
+
+    &__icon {
+        svg {
+            width: 28px;
+            transition: fill .2s;
+
+            &:not(:hover) {
+                fill: #263238!important;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: calc(var(--base-pm) * 2);
+        }
+    }
+}

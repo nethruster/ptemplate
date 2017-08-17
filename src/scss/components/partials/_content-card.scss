@@ -7,8 +7,14 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     overflow: hidden;
 
-    @import 'home/header';
-    
-    @import 'content-card-body';
+    @import '../home/home-header';
     @import 'header-nav';
+
+    &__body {
+        flex: 1;
+        background-color: var(--pt-content-card-background);
+
+        @import '../home/home-body';
+        @import '../work/work-body';
+    }
 }

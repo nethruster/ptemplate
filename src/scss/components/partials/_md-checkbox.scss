@@ -3,9 +3,18 @@
 
 .md__checkbox {
     display: inline-block;
-    padding: var(--base-pm) calc(var(--base-pm) * 2);
     transform: translateZ(0); // Force 3d rendering
-  
+
+    label {
+        padding: calc(var(--base-pm) / 2) var(--base-pm);
+        margin: calc(var(--base-pm) / 2) 0;
+        border-radius: calc(var(--base-br) / 2);
+
+        &:hover {
+            background-color: transparentize(#fff, .2);
+        }
+    }
+
     // Hide native checkbox
     input[type=checkbox] {
         opacity: 0;
@@ -18,58 +27,70 @@
         left: 0;
         pointer-events: none;
     }
-  
+
     .md__checkbox-material {
         vertical-align: middle;
         position: relative;
         top: 3px;
 
-    &:before {
-        position: absolute;
-        left: 8px;
-        top: 2px;
-        content: "";
-        background-color: rgba(0,0,0,0.5);
-        height: 4px;
-        width: 4px;
-        border-radius: 100%;
-        z-index: 1;
-        opacity: 0;
-        margin: 0;
-    }
-  
-    .md__checkbox-check {
-        position: relative;
-        display: inline-block;
-        width: var(--md-checkbox-size);
-        height: var(--md-checkbox-size);
-        border: 2px solid;
-        border-radius: 2px;
-        overflow: hidden;
-        z-index: 1;
+        &__text {
+            font-weight: 300;
+            margin-left: calc(var(--base-pm) * 2);
+            width: 100%;
+        }
+
+        // &__badge {
+        //     padding: 0 4px;
+        //     background: transparentize(darken(#fff, 15%), .2);
+        //     border-radius: 4px;
+        // }
+
+        &:before {
+            position: absolute;
+            left: 8px;
+            top: 2px;
+            content: "";
+            background-color: rgba(0,0,0,0.5);
+            height: 4px;
+            width: 4px;
+            border-radius: 100%;
+            z-index: 1;
+            opacity: 0;
+            margin: 0;
+        }
+
+        .md__checkbox-check {
+            position: relative;
+            display: inline-block;
+            width: var(--md-checkbox-size);
+            height: var(--md-checkbox-size);
+            border: 2px solid;
+            border-radius: 2px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .md__checkbox-check:before {
+            position: absolute;
+            content: "";
+            transform: rotate(45deg);
+            display: block;
+            margin-top: -4px;
+            margin-left: 6px;
+            width: 0;
+            height: 0;
+            box-shadow:
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0,
+                0 0 0 0 inset;
+            animation: checkbox-off var(--md-checkbox-animation-check) forwards ease-out;
+        }
     }
 
-    .md__checkbox-check:before {
-        position: absolute;
-        content: "";
-        transform: rotate(45deg);
-        display: block;
-        margin-top: -4px;
-        margin-left: 6px;
-        width: 0;
-        height: 0;
-        box-shadow:
-            0 0 0 0,
-            0 0 0 0,
-            0 0 0 0,
-            0 0 0 0,
-            0 0 0 0,
-            0 0 0 0,
-            0 0 0 0 inset;
-        animation: checkbox-off var(--md-checkbox-animation-check) forwards ease-out;
-    }
-}
-  
 input[type=checkbox]:focus + .md__checkbox-material .md__checkbox-check:after {
     opacity: 0.2;
 }
@@ -101,7 +122,7 @@ input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:before
 // input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:after {
 //     animation: rippleOn var(--md-checkbox-animation-ripple) forwards ease-out;
 // }
-  
+
     // // Style for disabled inputs
     // input[type=checkbox][disabled]:not(:checked) ~ .md__checkbox-material .md__checkbox-check:before,
     // input[type=checkbox][disabled] + .circle {
