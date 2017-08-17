@@ -24,12 +24,7 @@ const profile = {
 const projects = [
   {
     title: "Project Title #1",
-    img: {
-      isSvg: true,
-      svgId: "exmaple",
-      //Only if not a svg
-      url: ""
-    },
+    img: "https://www.nethruster.com/assets/img/icons/apple-touch-icon.png",
     description: "Lorem ipsum dolor sit amet, in nulla hendrerit ius, sed et congue graeci, qui id propriae accusata.",
     categories: ["Sample", "Open source", "React"],
     siteUrl: "amazing.project.com",
@@ -37,12 +32,7 @@ const projects = [
   },
   {
     title: "Project Title #2",
-    img: {
-      isSvg: true,
-      svgId: "exmaple",
-      //Only if not a svg
-      url: ""
-    },
+    img: "https://www.nethruster.com/assets/img/icons/apple-touch-icon.png",
     description: "Lorem ipsum dolor sit amet, in nulla hendrerit ius, sed et congue graeci, qui id propriae accusata.",
     categories: ["Sample", "Freeware", "Go"],
     siteUrl: "amazing.project.com",
@@ -50,12 +40,7 @@ const projects = [
   },
   {
     title: "Project Title #3",
-    img: {
-      isSvg: true,
-      svgId: "exmaple",
-      //Only if not a svg
-      url: ""
-    },
+    img: "https://www.nethruster.com/assets/img/icons/apple-touch-icon.png",
     description: "Lorem ipsum dolor sit amet, in nulla hendrerit ius, sed et congue graeci, qui id propriae accusata.",
     categories: ["Wat", "Linux", "LoL"],
     siteUrl: "amazing.project.es",

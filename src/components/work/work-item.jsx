@@ -34,7 +34,7 @@ export default class WorkItem extends React.PureComponent {
 
     return (
       <div className="pt-content-card__body__work-items__item flex">
-        <img className="pt-content-card__body__work-items__item__image" src="https://www.nethruster.com/assets/img/icons/apple-touch-icon.png" alt="Project Title" />
+        <img className="pt-content-card__body__work-items__item__image" src={this.props.work.img} alt="Project Title" />
         <div className="pt-content-card__body__work-items__item__data flex flex-dc flex-sb">
           <h4>{this.props.work.title}</h4>
           <p>{this.props.work.description}</p>
