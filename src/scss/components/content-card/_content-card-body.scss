@@ -19,11 +19,12 @@
         flex: 1;
 
         &__icon {
-            
-            color: #263238;
-
             svg {
                 width: 28px;
+                
+                &:not(:hover) {
+                    fill: #263238!important;
+                }
             }
 
             &:not(:last-child) {
