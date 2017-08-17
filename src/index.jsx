@@ -1,13 +1,13 @@
 import React from 'react';
-import {render} from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 require('./scss/index.scss');
 
 import ContentCard from './components/content-card.jsx';
 
 class App extends React.Component {
-  render () {
+  render() {
     return (
       <BrowserRouter>
         <ContentCard />
@@ -16,4 +16,4 @@ class App extends React.Component {
   }
 }
 
-render(<App/>, document.getElementById('pt-app'));
+render(<App />, document.getElementById('pt-app'));

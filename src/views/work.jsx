@@ -4,12 +4,12 @@ import Nav from '../components/partials/nav.jsx';
 import WorkBody from '../components/work/work-body.jsx';
 
 export default class Work extends React.PureComponent {
-  render () {
+  render() {
     return (
-        <div className="pt-content-card__work-container flex flex-dc">
-            <Nav icon="folder" title="my work" />
-            <WorkBody />
-        </div>
+      <div className="pt-content-card__work-container flex flex-dc">
+        <Nav icon="folder" title="my work" />
+        <WorkBody />
+      </div>
     );
   }
 }
