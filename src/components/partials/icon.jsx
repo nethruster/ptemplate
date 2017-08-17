@@ -3,7 +3,7 @@ import React from 'react';
 export default class Icon extends React.PureComponent {
   render() {
     const iconStyle = {
-      fill: this.props.iconColour
+      fill: this.props.iconColor
     };
 
     return (

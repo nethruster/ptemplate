@@ -7,17 +7,17 @@ const profile = {
         {
             iconName: "twitter",
             url: "https://twitter.com/username",
-            hoverColour: "#1da1f2"
+            hoverColor: "#1da1f2"
         },
         {
             iconName: "telegram",
             url: "https://t.me/username",
-            hoverColour: "#fff"
+            hoverColor: "#0088cc"
         },
         {
             iconName: "github",
             url: "https://github.com/username",
-            hoverColour: "#333"
+            hoverColor: "#000"
         }
     ]
 }
