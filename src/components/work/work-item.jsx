@@ -9,23 +9,23 @@ export default class WorkItem extends React.PureComponent {
     this.getLinksTags = this.getLinksTags.bind(this);
   }
   getLinksTags() {
-    var resp = Array(2);
+    var resp = [];
     if(this.props.work.siteUrl) {
-      resp[0] =  (
-        <a href={this.props.work.siteUrl} key={0} target="_blank" rel="noopener" title="Project Website" className="flex flex-dc flex-full-center">
+      resp.push(
+        <a href={this.props.work.siteUrl} key={resp.length} target="_blank" rel="noopener" title="Project Website" className="flex flex-dc flex-full-center">
           <Icon iconName="web" />
           <p>Visit Website</p>
         </a>
       )
-    } else { resp[0] = null}
+    }
     if(this.props.work.sourceCodeUrl) {
-      resp[1] =  (
-        <a href={this.props.work.sourceCodeUrl} key={1} target="_blank" rel="noopener" title="Project Source Code" className="flex flex-dc flex-full-center">
+      resp.push(
+        <a href={this.props.work.sourceCodeUrl} key={resp.length} target="_blank" rel="noopener" title="Project Source Code" className="flex flex-dc flex-full-center">
           <Icon iconName="code" />
           <p>Source Code</p>
         </a>
       )
-    } else { resp[1] = null}
+    }
     return resp;
   }
   render() {
