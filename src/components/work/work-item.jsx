@@ -13,22 +13,22 @@ export default class WorkItem extends React.PureComponent {
     let linkTags = [];
 
     if (this.props.work.siteUrl) {
-      linkTags[0] = (
-        <a href={this.props.work.siteUrl} key={resp.length} target="_blank" rel="noopener" title="Project Website" className="flex flex-dc flex-full-center">
+      linkTags[linkTags.length] = (
+        <a href={this.props.work.siteUrl} key={linkTags.length} target="_blank" rel="noopener" title="Project Website" className="flex flex-dc flex-full-center">
           <Icon iconName="web" />
           <p>Visit Website</p>
         </a>
       )
-    } else { linkTags[0] = null }
+    }
 
     if (this.props.work.sourceCodeUrl) {
-      linkTags[1] = (
-        <a href={this.props.work.sourceCodeUrl} key={resp.length} target="_blank" rel="noopener" title="Project Source Code" className="flex flex-dc flex-full-center">
+      linkTags[linkTags.length] = (
+        <a href={this.props.work.sourceCodeUrl} key={linkTags.length} target="_blank" rel="noopener" title="Project Source Code" className="flex flex-dc flex-full-center">
           <Icon iconName="code" />
           <p>Source Code</p>
         </a>
       )
-    } else { linkTags[1] = null }
+    }
 
     return linkTags;
   }
