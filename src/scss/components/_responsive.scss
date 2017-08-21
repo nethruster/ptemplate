@@ -108,3 +108,9 @@
         }
     }
 }
+
+@media (max-height: 470px) {
+    .pt-content-card__body__work-items {
+        flex-wrap: nowrap;
+    }
+}
