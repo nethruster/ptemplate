@@ -7,7 +7,7 @@ export default class Nav extends React.PureComponent {
   render() {
     return (
       <div className="pt-content-card__header pt-content-card__header--nav flex flex-cross-center">
-        <Link to="/"><div className="pt-content-card__header--nav__back-icon flex flex-full-center">
+        <Link to="/"><div className="pt-content-card__header--nav__icon flex flex-full-center">
           <Icon iconName="arrow-left" />
         </div>
         </Link>
@@ -15,6 +15,12 @@ export default class Nav extends React.PureComponent {
           <Icon iconName={this.props.icon} />
           <h2 className="ta-c">{this.props.title}</h2>
         </div>
+        {
+          this.props.handleDrawerState ?
+          <button style={{pointerEvents: this.props.isFiltersOpen ? 'none' : ''}} className="pt-content-card__header--nav__icon flex-full-center pointer" onClick={this.props.handleDrawerState} >
+            <Icon iconName="filter" />
+          </button> : null
+        }
       </div>
     );
   }

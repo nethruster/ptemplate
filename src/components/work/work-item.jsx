@@ -34,7 +34,7 @@ export default class WorkItem extends React.PureComponent {
   }
 
   render() {
-    let cateoryTags = this.props.work.categories.map((category, i) => <span key={i}>{category}</span>);
+    let categoryTags = this.props.work.categories.map((category, i) => <span key={i}>{category}</span>);
     let linkTags = this.getLinkTags();
 
     return (
@@ -44,7 +44,7 @@ export default class WorkItem extends React.PureComponent {
           <h4>{this.props.work.title}</h4>
           <p>{this.props.work.description}</p>
           <div className="pt-content-card__body__work-items__item__data__tags">
-            {cateoryTags}
+            {categoryTags}
           </div>
         </div>
         <div className="pt-content-card__body__work-items__item__buttons flex flex-dc">

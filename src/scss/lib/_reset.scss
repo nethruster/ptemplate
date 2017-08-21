@@ -229,6 +229,14 @@ button:-moz-focusring,
     outline: 1px dotted ButtonText;
 }
 
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: currentColor;
+}
+
 /**
 * Remove the default vertical scrollbar in IE.
 */

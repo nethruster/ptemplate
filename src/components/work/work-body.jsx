@@ -70,7 +70,14 @@ export default class WorkBody extends React.PureComponent {
   render() {
     return (
       <div className="pt-content-card__body flex flex-cross-center">
-        <WorkFilters filters={this.state.filters} handleFilterChange={this.handleFilterChange} handleAllFilterChange={this.handleAllFilterChange} />
+        <WorkFilters 
+          filters={this.state.filters}
+          handleFilterChange={this.handleFilterChange}
+          handleAllFilterChange={this.handleAllFilterChange}
+          isFiltersOpen={this.props.isFiltersOpen}
+          handleDrawerState={this.props.handleDrawerState} />
+
+        <div className={`pt-content-card__body__work-filters__overlay ${this.props.isFiltersOpen ? 'filters-open' : '' }`} onClick={this.props.handleDrawerState}></div>
         <div className="pt-content-card__body__work-items">
           {this.getFilteredWorkItems()}
         </div>
