@@ -6,8 +6,8 @@ const webpack = require('webpack');
   isProduction = process.argv.indexOf('-p') !== -1, // Check if we are in production mode
   extractStyles = new ExtractTextPlugin('styles.css');
 
-const BUILD_DIR = path.resolve(__dirname, 'src/dist');
-const APP_DIR = path.resolve(__dirname, 'src/');
+const BUILD_DIR = path.resolve(__dirname, 'dist');
+const APP_DIR = path.resolve(__dirname, 'src');
 
 const config = {
   devtool: isProduction ? undefined : 'cheap-module-source-map',  
