@@ -15,7 +15,7 @@ export default class HomeBody extends React.PureComponent {
     return (
       <div className="pt-content-card__body flex flex-dc flex-main-center">
         <div className="pt-content-card__body__icons flex flex-full-center flex-sa">
-          <HomeButton iconTitle="About" iconName="account" />
+          <Link to="/about"><HomeButton iconTitle="About" iconName="account" /></Link>
           <Link to="/work"><HomeButton iconTitle="Work" iconName="folder" /></Link>
           <HomeButton iconTitle="Contact" iconName="message" />
         </div>

@@ -1,0 +1,39 @@
+&__about {
+    &__presentation,
+    &__details {
+        height: 100%;
+        flex: 1;
+    }
+
+    &__presentation {
+        img {
+            max-width: 200px;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 1.7em;
+            text-transform: uppercase;
+        }
+    }
+
+    &__details {
+        p {
+            padding: calc(var(--base-pm) * 4);
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 1.2em;
+            margin-top: calc(var(--base-pm) * 6);
+        }
+
+        &__net-icons {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 100px;
+            width: 100%;
+            padding: calc(var(--base-pm) * 3);
+        }
+    }
+}

@@ -69,7 +69,7 @@ export default class WorkBody extends React.PureComponent {
 
   render() {
     return (
-      <div className="pt-content-card__body flex flex-cross-center">
+      <div className="pt-content-card__body pt-content-card__body__work flex flex-cross-center">
         <WorkFilters 
           filters={this.state.filters}
           handleFilterChange={this.handleFilterChange}
