@@ -34,6 +34,18 @@
             grid-template-rows: 100px;
             width: 100%;
             padding: calc(var(--base-pm) * 3);
+
+            a {
+                svg {
+                    transition: fill .2s;
+                }
+
+                &:not(:hover) {
+                    svg {
+                        fill: #263238!important;
+                    }
+                }
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ const profile = {
         iconName: "location",
         text: "Location, Place",
         url: "#",
-        hoverColor: "#000"
+        hoverColor: "#546e7a"
       },
       {
         iconName: "twitter",
@@ -25,13 +25,13 @@ const profile = {
         iconName: "email",
         text: "email@email.com",
         url: "mailto://email@email.com",
-        hoverColor: "#000"
+        hoverColor: "#546e7a"
       },
       {
-        iconName: "keybase",
+        iconName: "lock",
         text: "@kuser",
         url: "https://keybase.io/kuser",
-        hoverColor: "#ff6f21"
+        hoverColor: "#e9641c"
       },
     ]
   },
