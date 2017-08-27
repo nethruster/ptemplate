@@ -14,6 +14,18 @@
     }
 }
 
+@media (max-width: 900px) {
+    .pt-content-card__body__contact {
+        flex-direction: column;
+    }
+
+    .pt-content-card__body__contact__social,
+    .pt-content-card__body__contact__form {
+        flex: initial;
+    }
+    
+}
+
 @media (max-width: 700px) { 
     .md__checkbox label {
         padding: var(--base-pm) calc(var(--base-pm) * 4);
