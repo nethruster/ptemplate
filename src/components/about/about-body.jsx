@@ -9,7 +9,8 @@ export default class AboutBody extends React.PureComponent {
     const {about} = this.props.profile;
     const findMeOnElements = about.findMeOn.map(
       (element, i) => <a className="flex flex-cross-center" key={i} href={element.url} target="_blank"><Icon iconName={element.iconName} iconColor={element.hoverColor} />&nbsp;{element.text}</a>
-    ) 
+    )
+    
     return (
       <div className="pt-content-card__body pt-content-card__body__about flex flex-main-center">
         <div className="pt-content-card__body__about__presentation flex flex-dc flex-full-center">
