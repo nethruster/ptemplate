@@ -1,3 +1,4 @@
+import "babel-polyfill";
 import {FormUrl} from "../config"
 
 function validateName(name) {
