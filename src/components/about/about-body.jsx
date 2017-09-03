@@ -8,7 +8,11 @@ export default class AboutBody extends React.PureComponent {
   render() {
     const {about} = this.props.profile;
     const findMeOnElements = about.findMeOn.map(
-      (element, i) => <a className="flex flex-cross-center" key={i} href={element.url} target="_blank"><Icon iconName={element.iconName} iconColor={element.hoverColor} />&nbsp;{element.text}</a>
+      (element, i) => (element.url ? 
+        <a className="flex flex-cross-center" key={i} href={element.url} target="_blank"><Icon iconName={element.iconName} iconColor={element.hoverColor} />&nbsp;{element.text}</a>
+        :
+        <span className="flex flex-cross-center" key={i}><Icon iconName={element.iconName} iconColor={element.hoverColor} />&nbsp;{element.text}</span>
+      )
     )
     
     return (
