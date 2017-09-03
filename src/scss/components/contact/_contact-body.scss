@@ -38,13 +38,15 @@
             background-color: #303a45;
             padding: var(--base-pm) calc(var(--base-pm) * 2);
             border-radius: 4px;
-            color: #eef1f5;
+            color: #f1f1f1;
             text-transform: uppercase;
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: 300;
+            align-self: flex-start;
+            min-width: 150px;
 
             svg {
-                width: 20px;
+                width: 17px;
             }
         }
 
@@ -132,4 +134,8 @@
             }
         }
     }
+}
+
+.recaptcha {
+    margin-bottom: calc(var(--base-pm) * 2);
 }

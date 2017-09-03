@@ -11,7 +11,9 @@
   "license": "MIT",
   "dependencies": {
     "react": "next",
+    "react-async-script": "^0.9.1",
     "react-dom": "next",
+    "react-google-recaptcha": "^0.9.7",
     "react-router-dom": "^4.1.2"
   },
   "devDependencies": {

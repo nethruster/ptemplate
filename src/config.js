@@ -39,16 +39,25 @@ const profile = {
     {
       iconName: "twitter",
       url: "https://twitter.com/username",
+      text: "I'm on Twitter",
       hoverColor: "#1da1f2"
     },
     {
       iconName: "telegram",
       url: "https://t.me/username",
+      text: "I'm on Telegram",
       hoverColor: "#0088cc"
     },
     {
       iconName: "github",
       url: "https://github.com/username",
+      text: "I'm on Github",
+      hoverColor: "#000"
+    },
+    {
+      iconName: "email",
+      url: "mailto:email@email.co",
+      text: "Send me an email",
       hoverColor: "#000"
     }
   ]
