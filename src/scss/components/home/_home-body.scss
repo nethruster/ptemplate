@@ -2,6 +2,7 @@
 
 &__social-icons {
     flex: 1;
+    padding: calc(var(--base-pm) * 4);
 
     &__icon {
         svg {

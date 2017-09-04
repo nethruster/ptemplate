@@ -23,7 +23,17 @@
     .pt-content-card__body__contact__form {
         flex: initial;
     }
-    
+
+    .pt-content-card__header--nav {
+        position: fixed;
+        width: 100%;
+    }
+
+    .pt-content-card__body__contact,
+    .pt-content-card__body__work,
+    .pt-content-card__body__about {
+        margin-top: calc(var(--base-pm) * 8);
+    }
 }
 
 @media (max-width: 700px) { 
@@ -38,13 +48,18 @@
     }
 
     .pt-content-card__body__work-filters {
-        position: absolute;
+        & > p {
+            position: fixed;
+            width: 100%;
+        }
+
+        position: fixed;
         transform: translateX(-100vw);
         pointer-events: none;
         top: 0;
         left: 0;
         box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16), 0 3px 12px rgba(0, 0, 0, 0.23);
-        z-index: 10;
+        z-index: 210;
         transition: transform .3s;
 
         button {
@@ -58,11 +73,14 @@
 
         &__list {
             padding: var(--base-pm) 0;
+            margin-top: 64px;
+            overflow: scroll;
+            height: calc(100% - 58px);
         }
 
         &__overlay {
             display: block;
-            position: absolute;
+            position: fixed;
             background-color: #000;
             opacity: 0;
             pointer-events: none;
@@ -86,12 +104,6 @@
             color: var(--pt-content-card-background);
         }
     }
-}
-
-@media (max-width: 600px) {
-    .pt-content-card__body {
-        flex-direction: column;
-    }
 
     .pt-content-card__about-container {
         display: block;
@@ -104,6 +116,12 @@
         &__presentation { 
             padding-top: calc(var(--base-pm) * 6);
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .pt-content-card__body {
+        flex-direction: column;
     }
 }
 
@@ -137,6 +155,17 @@
 
     .pt-content-card__body__work-items__item__data__tags {
         display: none;
+    }
+}
+
+@media (max-height: 400px) {
+    .pt-content-card__body__work-items {
+        display: block;
+    }
+
+    #pt-app {
+        min-height: 100%;
+        height: auto;
     }
 }
 

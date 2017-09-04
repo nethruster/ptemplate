@@ -12,7 +12,7 @@ const profile = {
       {
         iconName: "location",
         text: "Location, Place",
-        url: "#",
+        url: "",
         hoverColor: "#546e7a"
       },
       {

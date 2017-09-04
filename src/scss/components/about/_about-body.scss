@@ -6,6 +6,8 @@
     }
 
     &__presentation {
+        padding: calc(var(--base-pm) * 4);
+        
         img {
             max-width: 200px;
         }
@@ -42,7 +44,7 @@
 
                 &:not(:hover) {
                     svg {
-                        fill: #263238!important;
+                        fill: #546e7a!important;
                     }
                 }
             }
