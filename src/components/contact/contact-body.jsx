@@ -3,7 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 import Icon from '../partials/icon.jsx';
 
-import SendToForm from '../../helpers/send-to-form.js'
+import sendToForm from '../../helpers/send-to-form.js'
 
 import { profile } from '../../config.js'
 
@@ -15,8 +15,9 @@ export default class ContactBody extends React.PureComponent {
       name: null,
       email: null,
       message: null,
-      captcha: null 
+      captcha: null
     };
+
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onCaptchaChange = this.onCaptchaChange.bind(this);
     this.setInputReference = this.setInputReference.bind(this);
@@ -32,13 +33,14 @@ export default class ContactBody extends React.PureComponent {
       return;
     }
 
-    SendToForm(
+    sendToForm(
       this.formInputs.name.value,
       this.formInputs.email.value,
       this.formInputs.message.value,
       value
     )
   }
+
   setInputReference(el) {
     this.formInputs[el.id] = el
   } 

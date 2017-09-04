@@ -89,9 +89,11 @@ const projects = [
     sourceCodeUrl: "github.com/user/:O"
   }
 ]
-const FormUrl = "http://localhost:4000"
+
+const formUrl = "http://localhost:4000"
+
 export {
   profile,
   projects,
-  FormUrl
+  formUrl
 }
