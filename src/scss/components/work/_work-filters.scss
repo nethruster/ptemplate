@@ -2,14 +2,14 @@
     height: 100%;
     flex: .4;
     background-color: #fff;
-    overflow-y: auto;
-    overflow-x: hidden;
     min-width: 200px;
 
     p {
         font-size: 1.2em;
+        height: 64px;
         font-weight: 400;
         padding: calc(var(--base-pm) * 4) calc(var(--base-pm) * 4) 0 calc(var(--base-pm) * 4);
+
     }
 
     button {

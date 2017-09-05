@@ -3,7 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 import Icon from '../partials/icon.jsx';
 
-import SendToForm from '../../helpers/send-to-form.js'
+import sendToForm from '../../helpers/send-to-form.js'
 
 import { profile } from '../../config.js'
 

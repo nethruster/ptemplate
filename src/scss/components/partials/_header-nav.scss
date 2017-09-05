@@ -1,12 +1,12 @@
 &__header--nav {
-    height: 60px;
+    height: 64px;
     padding: 0 calc(var(--base-pm) * 2);
     box-shadow: 0 3px 12px rgba(0,0,0,0.16), 0 3px 12px rgba(0,0,0,0.23);
+    z-index: 100;
 
     &__icon {
         background-color: transparentize(#fff, .9);
         border-radius: var(--base-br);
-        padding: calc(var(--base-pm) / 2);
 
         svg {
             width: 30px;
