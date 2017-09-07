@@ -10,7 +10,8 @@ import { profile } from '../../config.js'
 export default class ContactBody extends React.PureComponent {
   constructor(props) {
     super(props);
-
+    this.form;
+    
     this.formInputs = {
       name: null,
       email: null,
@@ -21,6 +22,10 @@ export default class ContactBody extends React.PureComponent {
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onCaptchaChange = this.onCaptchaChange.bind(this);
     this.setInputReference = this.setInputReference.bind(this);
+  }
+
+  componentWillMount() {
+    console.log(this.form);
   }
   
   onFormSubmit(e) {
@@ -42,7 +47,7 @@ export default class ContactBody extends React.PureComponent {
   }
 
   setInputReference(el) {
-    this.formInputs[el.id] = el
+    this.formInputs[el.id] = el;
   } 
 
   render() {
@@ -58,9 +63,9 @@ export default class ContactBody extends React.PureComponent {
           {socialIcons}
         </div>
         <div className="pt-content-card__body__contact__form flex flex-main-center">
-          <form className="flex flex-dc flex-full-center" onSubmit={this.onFormSubmit}>
+          <form className="flex flex-dc flex-full-center" onSubmit={this.onFormSubmit} ref={(el) => {this.form = el}} >
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
-              <input id="name" className="pt-content-card__body__contact__form__input" type="text" ref={this.setInputReference}/>
+              <input id="name" className="pt-content-card__body__contact__form__input" type="text" ref={this.setInputReference} />
               <label htmlFor="name" className="pt-content-card__body__contact__form__label">What's your name?</label>
               <svg className="line" viewBox="0 0 40 2" preserveAspectRatio="none">
                 <path d="M0 1 L40 1" />
@@ -70,7 +75,7 @@ export default class ContactBody extends React.PureComponent {
               </svg>
             </div>
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
-              <input id="email" className="pt-content-card__body__contact__form__input" type="email" ref={this.setInputReference}/>
+              <input id="email" className="pt-content-card__body__contact__form__input" type="email" ref={this.setInputReference} />
               <label htmlFor="email" className="pt-content-card__body__contact__form__label">What's your email?</label>
               <svg className="line" viewBox="0 0 40 2" preserveAspectRatio="none">
                 <path d="M0 1 L40 1" />
@@ -80,7 +85,7 @@ export default class ContactBody extends React.PureComponent {
               </svg>
             </div>
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
-              <textarea id="message" className="pt-content-card__body__contact__form__textarea" rows="6" ref={this.setInputReference}/>
+              <textarea id="message" className="pt-content-card__body__contact__form__textarea" rows="6" ref={this.setInputReference} />
               <label htmlFor="message" className="pt-content-card__body__contact__form__label">Please, explain yourself:</label>
               <svg className="line" viewBox="0 0 40 2" preserveAspectRatio="none">
                 <path d="M0 1 L40 1" />
@@ -93,6 +98,7 @@ export default class ContactBody extends React.PureComponent {
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
               <ReCAPTCHA
                 ref={(el) => {this.formInputs.captcha = el}}
+                id="captcha"
                 className="recaptcha"
                 size="invisible"
                 sitekey="6LcBOC8UAAAAAM9YRyBp1RR-1NnwvMU8UDsR63Vu"
