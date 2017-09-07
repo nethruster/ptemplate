@@ -46,6 +46,13 @@ export default class ContactBody extends React.PureComponent {
     this.setState({
       [e.target.id]: e.target.value
     })
+    
+    if(e.target.value) {
+      e.target.nextElementSibling.classList.add('has-content');   
+    } 
+    else {
+      e.target.nextElementSibling.classList.remove('has-content');   
+    }
   } 
 
   render() {
