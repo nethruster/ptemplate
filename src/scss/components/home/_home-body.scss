@@ -2,7 +2,7 @@
 
 &__icons {
     a {
-        @for $i from 1 through 3 {
+        @for $i from 1 through 10 {
             &:nth-child(#{$i}) {
                 @include transition_come-in(2 + $i);
             }
@@ -15,7 +15,7 @@
     padding: calc(var(--base-pm) * 4);
 
     &__icon {
-        @for $i from 1 through 4 {
+        @for $i from 1 through 10 {
             &:nth-child(#{$i}) {
                 @include transition_come-in(4 + $i);
             }

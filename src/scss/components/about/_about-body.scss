@@ -17,17 +17,22 @@
             font-size: 1.7em;
             text-transform: uppercase;
         }
+
+        @include transition_come-in(1);
     }
+    
 
     &__details {
         p {
             padding: calc(var(--base-pm) * 4);
+            @include transition_come-in(3);
         }
 
         h3 {
             font-weight: 400;
             font-size: 1.2em;
             margin-top: calc(var(--base-pm) * 6);
+            @include transition_come-in(4);
         }
 
         &__net-icons {
@@ -36,6 +41,7 @@
             grid-template-rows: 100px;
             width: 100%;
             padding: calc(var(--base-pm) * 3);
+            @include transition_come-in(4);
 
             a {
                 svg {

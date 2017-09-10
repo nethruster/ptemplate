@@ -9,6 +9,12 @@
 
         a {
             margin: calc(var(--base-pm) * 2) 0;
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    @include transition_come-in($i);
+                }
+            }
         }
 
         &__item {
@@ -29,6 +35,11 @@
         height: 100%;
         width: 100%;
         align-self: center;
+        animation: fadeIn;
+        animation-duration: .4s;
+        animation-delay: .1s;
+        animation-fill-mode: both;
+        opacity: 1;
 
         form {
             padding: calc(var(--base-pm) * 4);

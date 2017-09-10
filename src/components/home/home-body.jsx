@@ -19,9 +19,12 @@ export default class HomeBody extends React.PureComponent {
           <Link to="/work" title="My Work"><HomeButton iconTitle="Work" iconName="folder" /></Link>
           <Link to="/contact" title="Contact me"><HomeButton iconTitle="Contact" iconName="message" /></Link>
         </div>
-        <div className="pt-content-card__body__social-icons flex flex-full-center">
-          {socialIcons}
-        </div>
+        {
+          this.props.profile.social.length > 0 &&
+          <div className="pt-content-card__body__social-icons flex flex-full-center">
+            {socialIcons}
+          </div>
+        }
       </div>
     );
   }

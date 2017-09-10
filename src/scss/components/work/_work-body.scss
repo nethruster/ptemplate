@@ -1,2 +1,13 @@
 @import 'work-filters';
 @import 'work-item';
+
+.no-projects-text {
+    font-size: 1.6em;
+    text-align: center;
+    color: transparentize(#868686, .2);
+    font-weight: 300;
+
+    svg {
+        width: 32px;
+    }
+}

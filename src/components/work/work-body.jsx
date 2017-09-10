@@ -3,7 +3,9 @@ import React from 'react';
 import WorkFilters from './work-filters.jsx';
 import WorkItem from './work-item.jsx';
 
-import { projects } from "../../config";
+import Icon from '../partials/icon.jsx';
+
+import { projects } from "../../config.js";
 
 export default class WorkBody extends React.PureComponent {
   constructor(props) {
@@ -34,19 +36,28 @@ export default class WorkBody extends React.PureComponent {
   }
 
   getFilteredWorkItems() {
-    return this.state.projects.map((project, i) => {
-      let match = false;
+    if(this.state.projects.length) {
+      return this.state.projects.map((project, i) => {
+        let match = false;
 
-      project.categories.forEach((category) => {
-        if (this.state.filters[category]) {
-          match = true;
+        project.categories.forEach((category) => {
+          if (this.state.filters[category]) {
+            match = true;
+          }
+        })
+
+        if (match) {
+          return <WorkItem key={i} work={project} />
         }
-      })
-
-      if (match) {
-        return <WorkItem key={i} work={project} />
-      }
-    });
+      });
+    } else {
+      return (
+        <p className="no-projects-text flex flex-dc flex-cross-center">
+          <Icon iconName="person" />
+          Whoops! There's nothing here yet!
+        </p>
+      );
+    }
   }
 
   handleFilterChange(category, value) {
@@ -68,17 +79,29 @@ export default class WorkBody extends React.PureComponent {
   }
 
   render() {
+
+    let computeWorkExtraStyle = {};
+
+    if(this.state.projects.length <= 0) {
+      computeWorkExtraStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }
+    }
+
     return (
       <div className="pt-content-card__body pt-content-card__body__work flex flex-cross-center">
+      {this.state.projects.length > 0 &&
         <WorkFilters 
           filters={this.state.filters}
           handleFilterChange={this.handleFilterChange}
           handleAllFilterChange={this.handleAllFilterChange}
           isFiltersOpen={this.props.isFiltersOpen}
           handleDrawerState={this.props.handleDrawerState} />
-
+        }
         <div className={`pt-content-card__body__work-filters__overlay ${this.props.isFiltersOpen ? 'filters-open' : '' }`} onClick={this.props.handleDrawerState}></div>
-        <div className="pt-content-card__body__work-items">
+        <div className="pt-content-card__body__work-items" style={computeWorkExtraStyle}>
           {this.getFilteredWorkItems()}
         </div>
       </div>

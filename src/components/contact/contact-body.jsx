@@ -64,9 +64,12 @@ export default class ContactBody extends React.PureComponent {
 
     return (
       <div className="pt-content-card__body pt-content-card__body__contact flex">
+      {
+        profile.social.length > 0 &&
         <div className="pt-content-card__body__contact__social flex flex-dc flex-full-center">
           {socialIcons}
         </div>
+      }
         <div className="pt-content-card__body__contact__form flex flex-main-center">
           <form className="flex flex-dc flex-full-center" onSubmit={this.onFormSubmit}>
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
