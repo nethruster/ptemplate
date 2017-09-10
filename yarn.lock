@@ -3799,6 +3799,10 @@ react-google-recaptcha@^0.9.7:
   dependencies:
     prop-types ">=15.5.0"
 
+react-ink@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/react-ink/-/react-ink-6.2.0.tgz#b268107bf986c6009bd38d7d3baa9fba1016e368"
+
 react-router-dom@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.1.2.tgz#7f8a7ca868d32acadd19ca09543b40d26df8ec37"

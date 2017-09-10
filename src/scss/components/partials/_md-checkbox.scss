@@ -9,6 +9,7 @@
         padding: calc(var(--base-pm) / 2) calc(var(--base-pm) * 4);
         margin: calc(var(--base-pm) / 2) 0;
         border-radius: calc(var(--base-br) / 2);
+        position: relative;
 
         &:hover {
             background-color: transparentize(darken(#fff, 5%), .2);
