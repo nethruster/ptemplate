@@ -1,5 +1,5 @@
 const profile = {
-  fullname: "Website Owner",
+  fullName: "Website Owner",
   description: "FRONT-END DEVELOPER",
   about: {
     title: `HEY THERE! 

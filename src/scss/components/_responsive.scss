@@ -44,10 +44,6 @@
     .pt-content-card__home-container--home {
         height: 100vh;
     }
-
-    html {
-        height: auto;
-    }
 }
 
 @media (max-width: 700px) { 
@@ -103,7 +99,7 @@
             top: 0;
             left: 0;
             transition: opacity .2s;
-            z-index: 5;
+            z-index: 100;
 
             &.filters-open {
                 pointer-events: initial;

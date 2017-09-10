@@ -11,7 +11,10 @@
 /**
  * App main views
  */
- @import 'views/views';
+@import 'views/views';
 
 
- @import 'components/responsive';
+ /**
+ * Responsive media queries loaded the last to override
+ */
+@import 'components/responsive';

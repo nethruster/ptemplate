@@ -17,12 +17,14 @@
             border-radius: 50%;
             max-height: 130px;
         }
+        @include  transition_come-in(1);
     }
 
     &__title-name,
     &__title-desc {
         text-transform: uppercase;
         font-weight: 300;
+        @include  transition_come-in(2);
     }
 
     &__title-desc {

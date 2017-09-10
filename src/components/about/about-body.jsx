@@ -9,7 +9,7 @@ export default class AboutBody extends React.PureComponent {
     const {about} = this.props.profile;
     const findMeOnElements = about.findMeOn.map(
       (element, i) => (element.url ? 
-        <a className="flex flex-cross-center" key={i} href={element.url} target="_blank"><Icon iconName={element.iconName} iconColor={element.hoverColor} />&nbsp;{element.text}</a>
+        <a className="flex flex-cross-center" key={i} href={element.url} target="_blank" title={element.url}><Icon iconName={element.iconName} iconColor={element.hoverColor} />&nbsp;{element.text}</a>
         :
         <span className="flex flex-cross-center" key={i}><Icon iconName={element.iconName} iconColor={element.hoverColor} />&nbsp;{element.text}</span>
       )
@@ -18,7 +18,7 @@ export default class AboutBody extends React.PureComponent {
     return (
       <div className="pt-content-card__body pt-content-card__body__about flex flex-main-center">
         <div className="pt-content-card__body__about__presentation flex flex-dc flex-full-center">
-           <img src="./assets/avatar.svg" alt="WEBSITE OWNER's Image" />
+           <img src="./assets/avatar.svg" alt={`${this.props.profile.fullName}'s Image`} />
            <h1 className="ta-c">{linebreakToBr(about.title)}</h1>
         </div>
         <div className="pt-content-card__body__about__details flex flex-dc flex-full-center">

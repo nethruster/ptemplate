@@ -1,0 +1,7 @@
+@mixin transition_come-in ($level) {
+    animation: comeIn;
+    animation-duration: .6s;
+    animation-delay: $level * .1s;
+    animation-fill-mode: both;
+    opacity: 1;
+}

@@ -14,7 +14,7 @@ export default class WorkItem extends React.PureComponent {
 
     if (this.props.work.siteUrl) {
       linkTags[linkTags.length] = (
-        <a href={this.props.work.siteUrl} key={linkTags.length} target="_blank" rel="noopener" title="Project Website" className="flex flex-dc flex-full-center">
+        <a href={this.props.work.siteUrl} key={linkTags.length} target="_blank" rel="noopener" title={`${this.props.work.title} Website`} className="flex flex-dc flex-full-center">
           <Icon iconName="web" />
           <p>Visit Website</p>
         </a>
@@ -23,7 +23,7 @@ export default class WorkItem extends React.PureComponent {
 
     if (this.props.work.sourceCodeUrl) {
       linkTags[linkTags.length] = (
-        <a href={this.props.work.sourceCodeUrl} key={linkTags.length} target="_blank" rel="noopener" title="Project Source Code" className="flex flex-dc flex-full-center">
+        <a href={this.props.work.sourceCodeUrl} key={linkTags.length} target="_blank" rel="noopener" title={`${this.props.work.title} Source Code`} className="flex flex-dc flex-full-center">
           <Icon iconName="code" />
           <p>Source Code</p>
         </a>
@@ -39,7 +39,7 @@ export default class WorkItem extends React.PureComponent {
 
     return (
       <div className="pt-content-card__body__work-items__item flex">
-        <img className="pt-content-card__body__work-items__item__image" src={this.props.work.img} alt="Project Title" />
+        <img className="pt-content-card__body__work-items__item__image" src={this.props.work.img} alt={`${this.props.work.title} Icon`} />
         <div className="pt-content-card__body__work-items__item__data flex flex-dc flex-sb">
           <h4>{this.props.work.title}</h4>
           <p>{this.props.work.description}</p>

@@ -28,6 +28,7 @@
         flex: 2;
         height: 100%;
         width: 100%;
+        align-self: center;
 
         form {
             padding: calc(var(--base-pm) * 4);
@@ -81,7 +82,7 @@
             textarea {
                 resize: vertical;
                 height: auto;
-                max-height: 680px;
+                max-height: 250px;
             }
     
             .line {

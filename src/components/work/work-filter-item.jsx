@@ -13,7 +13,7 @@ export default class WorkFilterItem extends React.PureComponent {
 
   render() {
     return (
-      <li className="md__checkbox">
+      <li className="md__checkbox" title={`${this.props.name} projects`}>
         <label className="flex flex-cross-center pointer">
           <input type="checkbox" onChange={this.handleChange} checked={this.props.value} />
           <span className="md__checkbox-material"><span className="md__checkbox-check"></span></span>

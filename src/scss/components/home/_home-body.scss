@@ -1,10 +1,26 @@
 @import 'home-button';
 
+&__icons {
+    a {
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                @include transition_come-in(2 + $i);
+            }
+        }
+    }
+}
+
 &__social-icons {
     flex: 1;
     padding: calc(var(--base-pm) * 4);
 
     &__icon {
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                @include transition_come-in(4 + $i);
+            }
+        }
+
         svg {
             width: 28px;
             transition: fill .2s;

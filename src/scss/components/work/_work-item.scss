@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     padding: calc(var(--base-pm) * 2);
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 130px;
     overflow: auto;
     transition: padding .3s;
@@ -19,6 +19,11 @@
         transition: all .3s;
         margin: var(--base-pm) 0;
         justify-self: center;
+        animation: fadeIn;
+        animation-duration: .4s;
+        animation-delay: .1s;
+        animation-fill-mode: both;
+        opacity: 1;
 
         &:only-child {
             max-width: none;

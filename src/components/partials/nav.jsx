@@ -7,7 +7,7 @@ export default class Nav extends React.PureComponent {
   render() {
     return (
       <div className="pt-content-card__header pt-content-card__header--nav flex flex-cross-center">
-        <Link to="/"><div className="pt-content-card__header--nav__icon flex flex-full-center">
+        <Link to="/" title="Go back"><div className="pt-content-card__header--nav__icon flex flex-full-center">
           <Icon iconName="arrow-left" />
         </div>
         </Link>
