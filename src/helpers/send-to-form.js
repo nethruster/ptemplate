@@ -1,12 +1,12 @@
 import "babel-polyfill";
-import {formUrl} from "../config";
+import { formUrl } from "../config";
 
 function validateName(name) {
   return !!name;
 }
 
 function validateEmail(email) {
-  if(email && email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)) {
+  if (email && email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i)) {
     return true;
   }
 
@@ -22,7 +22,6 @@ function validateGRecaptchaResponse(gRecaptchaResponse) {
 }
 
 async function sendData(name, email, message, gRecaptchaResponse) {
-  let success;
   let postData = JSON.stringify({
     name,
     email,
@@ -30,45 +29,45 @@ async function sendData(name, email, message, gRecaptchaResponse) {
     "g-recaptcha-response": gRecaptchaResponse
   })
 
-  await fetch(formUrl, {
+  return fetch(formUrl, {
     method: 'post',
     headers: {
-      "Content-type": "application/json; charset=UTF-8" 
+      "Content-type": "application/json; charset=UTF-8"
     },
     body: postData
   })
-  .then(response => {
-    if (response.status >= 200 && response.status < 300) {
-      success = true;
-    } else {
-      success = false;
-    }
-  })
-  .catch(err => {
-    success = false;
-  })
-
-  return success;
 }
 
-async function sendToForm(name, email, message, gRecaptchaResponse) {
-  if(!validateName(name)) {
-    throw "Invalid name";
-  }
+function sendToForm(name, email, message, gRecaptchaResponse) {
+  return new Promise((resolve, reject) => {
+    if (!validateName(name)) {
+      return reject("Invalid name");
+    }
 
-  if(!validateEmail(email)) {
-    throw "Invalid email";
-  }
+    if (!validateEmail(email)) {
+      return reject("Invalid email");
+    }
 
-  if(!validateMessage(message)) {
-    throw "Invalid message";
-  }
+    if (!validateMessage(message)) {
+      return reject("Invalid message");
+    }
 
-  if(!validateGRecaptchaResponse(gRecaptchaResponse)) {
-    throw "Invalid gRecaptchaResponse";
-  }
-  
-  return await sendData(name, email, message, gRecaptchaResponse);
+    if (!validateGRecaptchaResponse(gRecaptchaResponse)) {
+      return reject("Invalid gRecaptchaResponse");
+    }
+
+    sendData(name, email, message, gRecaptchaResponse)
+      .then(response => {
+        if (response.status >= 200 && response.status < 300) {
+          resolve();
+        } else {
+          reject("Server returned a response code out of range")
+        }
+      })
+      .catch(err => {
+        reject(err);
+      });
+  })
 }
 
 export default sendToForm;
