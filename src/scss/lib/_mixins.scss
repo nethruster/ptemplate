@@ -5,3 +5,11 @@
     animation-fill-mode: both;
     opacity: 1;
 }
+
+@mixin transition_toast ($level) {
+    animation: comeInToast;
+    animation-duration: .3s;
+    animation-delay: $level * .1s;
+    animation-fill-mode: both;
+    opacity: 1;
+}

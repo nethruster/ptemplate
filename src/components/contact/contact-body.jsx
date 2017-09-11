@@ -2,14 +2,16 @@ import React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import Icon from '../partials/icon.jsx';
+import Notifications, {notify} from 'react-notify-toast';
 
-import sendToForm from '../../helpers/send-to-form.js'
+import sendToForm from '../../helpers/send-to-form.js';
 
 import { profile } from '../../config.js'
 
 export default class ContactBody extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.show = notify.createShowQueue();
 
     this.state = {
       name: "",
@@ -37,7 +39,7 @@ export default class ContactBody extends React.PureComponent {
         this.state.captchaValue
       )
     } catch (err) {
-      console.log(err);
+      notify.show(err, "error", 5000);
     }
 
     this.captcha.reset();
@@ -62,7 +64,7 @@ export default class ContactBody extends React.PureComponent {
     else {
       e.target.nextElementSibling.classList.remove('has-content');
     }
-  } 
+  }
 
   render() {
     const socialIcons = profile.social.map((element, i) => (
@@ -73,6 +75,7 @@ export default class ContactBody extends React.PureComponent {
 
     return (
       <div className="pt-content-card__body pt-content-card__body__contact flex">
+      <Notifications />
       {
         profile.social.length > 0 &&
         <div className="pt-content-card__body__contact__social flex flex-dc flex-full-center">

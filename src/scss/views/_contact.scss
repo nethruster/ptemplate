@@ -2,3 +2,22 @@
     width: 100%;
     min-height: 100%;
 }
+
+.toast-notification {
+    position: fixed!important;
+    min-width: 10px;
+    width: auto!important;
+    margin: var(--base-pm)!important;
+    bottom: 6px!important;
+    top: initial!important;
+    left: 0px!important;
+    right: initial!important;
+    transform: translateY(0px)!important;
+    @include transition_toast(2);
+
+    span {
+        background-color: #f44336!important;
+        color: #f1f1f1!important;
+        border-radius: calc(var(--base-br) / 2)!important;
+    }
+}
