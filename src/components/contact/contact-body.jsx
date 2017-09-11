@@ -14,7 +14,8 @@ export default class ContactBody extends React.PureComponent {
     this.state = {
       name: "",
       email: "",
-      message: ""
+      message: "",
+      captchaValue: ""
     };
     
     this.captcha = null;
@@ -27,6 +28,19 @@ export default class ContactBody extends React.PureComponent {
   onFormSubmit(e) {
     e.preventDefault();
     this.captcha.execute();
+
+    try {
+      sendToForm(
+        this.state.name,
+        this.state.email,
+        this.state.message,
+        this.state.captchaValue
+      )
+    } catch (err) {
+      console.log(err);
+    }
+
+    this.captcha.reset();
   }
 
   onCaptchaChange(value) {
@@ -34,24 +48,19 @@ export default class ContactBody extends React.PureComponent {
       return;
     }
 
-    sendToForm(
-      this.formInputs.name.value,
-      this.formInputs.email.value,
-      this.formInputs.message.value,
-      value
-    )
+    this.setState({captchaValue: value});
   }
 
   onInputValueChange(e) {
     this.setState({
       [e.target.id]: e.target.value
-    })
+    });
     
     if(e.target.value) {
-      e.target.nextElementSibling.classList.add('has-content');   
+      e.target.nextElementSibling.classList.add('has-content');
     } 
     else {
-      e.target.nextElementSibling.classList.remove('has-content');   
+      e.target.nextElementSibling.classList.remove('has-content');
     }
   } 
 
