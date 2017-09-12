@@ -44,6 +44,18 @@
     .pt-content-card__home-container--home {
         height: 100vh;
     }
+
+    .toast-notification {
+        width: 100%!important;
+        margin: 0!important;
+        bottom: 0px!important;
+    
+        span {
+            display: inline-block!important;
+            width: 100vw!important;
+            border-radius: 0!important;
+        }
+    }
 }
 
 @media (max-width: 700px) { 

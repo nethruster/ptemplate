@@ -59,14 +59,16 @@ function sendToForm(name, email, message, gRecaptchaResponse) {
     sendData(name, email, message, gRecaptchaResponse)
       .then(response => {
         if (response.status >= 200 && response.status < 300) {
-          resolve();
+          resolve("Message sent successfully");
         } else {
-          reject("Server returned a response code out of range")
+          reject("Server returned a an invalid response");
         }
       })
       .catch(err => {
         reject(err);
       });
+  }).catch(error => {
+    return error;
   })
 }
 

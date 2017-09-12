@@ -31,20 +31,18 @@ export default class ContactBody extends React.PureComponent {
     e.preventDefault();
     this.captcha.execute();
 
-    try {
       sendToForm(
         this.state.name,
         this.state.email,
         this.state.message,
-        this.state.captchaValue
-      )
-    } catch (err) {
-      notify.show(err, "error", 5000);
-    }
+        this.state.captchaValue)
+        .then(message => {
+          this.show(message);
+          
+        })
 
     this.captcha.reset();
   }
-
   onCaptchaChange(value) {
     if(value === null) {
       return;
