@@ -1,17 +1,20 @@
 import React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { ToastContainer, toast } from 'react-toastify';
 
 import Icon from '../partials/icon.jsx';
-import Notifications, {notify} from 'react-notify-toast';
 
 import sendToForm from '../../helpers/send-to-form.js';
 
 import { profile } from '../../config.js'
 
+const CloseButton = ({ closeToast }) => (
+  <span className="toastify-dismiss">Close</span>
+);
+
 export default class ContactBody extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.show = notify.createShowQueue();
 
     this.state = {
       name: "",
@@ -26,6 +29,13 @@ export default class ContactBody extends React.PureComponent {
     this.onCaptchaChange = this.onCaptchaChange.bind(this);
     this.onInputValueChange = this.onInputValueChange.bind(this);
   }
+
+  notify (text) {
+    toast(text, {
+        closeButton: <CloseButton />,
+        autoClose: 5000}
+      )
+  }
   
   onFormSubmit(e) {
     e.preventDefault();
@@ -37,8 +47,7 @@ export default class ContactBody extends React.PureComponent {
         this.state.message,
         this.state.captchaValue)
         .then(message => {
-          this.show(message);
-          
+          this.notify(message);
         })
 
     this.captcha.reset();
@@ -47,7 +56,7 @@ export default class ContactBody extends React.PureComponent {
     if(value === null) {
       return;
     }
-
+    console.log(value);
     this.setState({captchaValue: value});
   }
 
@@ -73,7 +82,19 @@ export default class ContactBody extends React.PureComponent {
 
     return (
       <div className="pt-content-card__body pt-content-card__body__contact flex">
-      <Notifications />
+      <ReCAPTCHA
+        ref={(el) => {this.captcha = el}}
+        className="recaptcha"
+        size="invisible"
+        sitekey="6LcBOC8UAAAAAM9YRyBp1RR-1NnwvMU8UDsR63Vu"
+        onChange={this.onCaptchaChange}
+      />
+
+      <ToastContainer 
+        position="bottom-left"
+        type="default"
+      />
+      
       {
         profile.social.length > 0 &&
         <div className="pt-content-card__body__contact__social flex flex-dc flex-full-center">
@@ -114,13 +135,6 @@ export default class ContactBody extends React.PureComponent {
             </div>
 
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
-              <ReCAPTCHA
-                ref={(el) => {this.captcha = el}}
-                className="recaptcha"
-                size="invisible"
-                sitekey="6LcBOC8UAAAAAM9YRyBp1RR-1NnwvMU8UDsR63Vu"
-                onChange={this.onCaptchaChange}
-              />
               <button className="pt-content-card__body__contact__form__send-button flex flex-full-center pointer">Send&nbsp;<Icon iconName="send" /></button>
             </div>
           </form>
