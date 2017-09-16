@@ -6,10 +6,10 @@ import Icon from '../partials/icon.jsx';
 
 import sendToForm from '../../helpers/send-to-form.js';
 
-import { profile } from '../../config.js'
+import { profile, ReCAPTCHAKey } from '../../config.js'
 
 const CloseButton = ({ closeToast }) => (
-  <span className="toastify-dismiss">Close</span>
+  <span className="toastify-dismiss" onClick={closeToast}>Close</span>
 );
 
 export default class ContactBody extends React.PureComponent {
@@ -20,7 +20,7 @@ export default class ContactBody extends React.PureComponent {
       name: "",
       email: "",
       message: "",
-      captchaValue: ""
+      isFormLoading: false
     };
     
     this.captcha = null;
@@ -30,34 +30,54 @@ export default class ContactBody extends React.PureComponent {
     this.onInputValueChange = this.onInputValueChange.bind(this);
   }
 
-  notify (text) {
-    toast(text, {
-        closeButton: <CloseButton />,
-        autoClose: 5000}
-      )
+  notify (text, type) {
+    switch(type) {
+      case "Success":
+        toast.success(text, {
+          closeButton: <CloseButton />,
+          autoClose: 3000}
+        )
+        break;
+      case "Error":
+        toast.error(text, {
+          closeButton: <CloseButton />,
+          autoClose: 3000}
+        )
+        break;
+      default:
+        toast(text, {
+          closeButton: <CloseButton />,
+          autoClose: 3000}
+        )
+        break;
+    }
   }
   
   onFormSubmit(e) {
     e.preventDefault();
     this.captcha.execute();
-
-      sendToForm(
-        this.state.name,
-        this.state.email,
-        this.state.message,
-        this.state.captchaValue)
-        .then(message => {
-          this.notify(message);
-        })
-
-    this.captcha.reset();
   }
   onCaptchaChange(value) {
     if(value === null) {
       return;
     }
-    console.log(value);
-    this.setState({captchaValue: value});
+
+    this.setState({isFormLoading: true});
+    sendToForm(
+      this.state.name,
+      this.state.email,
+      this.state.message,
+      value)
+      .then(message => {
+        this.notify(message, "Success");
+        this.captcha.reset();
+        this.setState({isFormLoading: false});
+      })
+      .catch(err => {
+        this.notify(err, "Error");
+        this.captcha.reset();
+        this.setState({isFormLoading: false});
+      })
   }
 
   onInputValueChange(e) {
@@ -86,7 +106,7 @@ export default class ContactBody extends React.PureComponent {
         ref={(el) => {this.captcha = el}}
         className="recaptcha"
         size="invisible"
-        sitekey="6LcBOC8UAAAAAM9YRyBp1RR-1NnwvMU8UDsR63Vu"
+        sitekey={ReCAPTCHAKey}
         onChange={this.onCaptchaChange}
       />
 
@@ -135,7 +155,7 @@ export default class ContactBody extends React.PureComponent {
             </div>
 
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
-              <button className="pt-content-card__body__contact__form__send-button flex flex-full-center pointer">Send&nbsp;<Icon iconName="send" /></button>
+              <button className="pt-content-card__body__contact__form__send-button flex flex-full-center pointer" disabled={this.state.isFormLoading}>Send&nbsp;<Icon iconName="send" /></button>
             </div>
           </form>
         </div>

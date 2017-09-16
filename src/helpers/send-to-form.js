@@ -65,11 +65,9 @@ function sendToForm(name, email, message, gRecaptchaResponse) {
         }
       })
       .catch(err => {
-        reject(err);
+        reject("Connection Error");
       });
-  }).catch(error => {
-    return error;
-  })
+  });
 }
 
 export default sendToForm;
