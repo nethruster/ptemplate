@@ -36,8 +36,8 @@
 }
 
 .toastify--bottom-left {
-    bottom: 1em;
-    left: 1em; 
+    bottom: var(--base-pm);
+    left: var(--base-pm); 
 }
 
 .toastify__close {
@@ -65,8 +65,8 @@
 .toastify-content {
     position: relative;
     min-height: 48px;
-    padding: 8px;
-    border-radius: 4px;
+    padding: var(--base-pm);
+    border-radius: var(--base-br);
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);
     background-color: #323232;
     color: #f1f1f1;
@@ -76,11 +76,10 @@
     overflow: hidden;
     font-family: sans-serif;
     padding: calc(var(--base-pm) * 1.5);
-}
 
-.toastify-content--default {
-    background: #323232;
-    color: #f1f1f1; 
+    &:not(:last-child) {
+        margin-bottom: var(--base-pm);
+    }
 }
 
 .toastify__body { 
@@ -98,8 +97,26 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color .2s;
+    color: #f1f1f1;
 
     &:hover {
         background-color: rgba(255,255,255, .2);
     }
 }
+
+.toastify-content--default {
+    background: #323232;
+    color: #f1f1f1;
+}
+
+.toastify-content--error {
+    background: #F44336;
+    color: #f1f1f1;
+}
+
+.toastify-content--success {
+    background: #00C853;
+    color: #f1f1f1;
+}
+
+
