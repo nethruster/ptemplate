@@ -203,6 +203,20 @@
     }
 }
 
+@media only screen and (max-width: 480px) {
+    .toastify {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .toastify--bottom-left {
+        left: 0;
+        bottom: 0;
+        margin: 0;
+    } 
+
+    .toastify-content { margin-bottom: 0; }
+}
 
 @media (max-height: 400px) {
     .pt-content-card__body__work-items {
@@ -220,3 +234,6 @@
         flex-wrap: nowrap;
     }
 }
+
+
+
