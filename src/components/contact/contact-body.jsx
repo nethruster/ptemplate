@@ -35,20 +35,20 @@ export default class ContactBody extends React.PureComponent {
       case "Success":
         toast.success(text, {
           closeButton: <CloseButton />,
-          autoClose: 3000}
-        )
+          closeOnClick: false 
+        })
         break;
       case "Error":
         toast.error(text, {
           closeButton: <CloseButton />,
-          autoClose: 3000}
-        )
+          closeOnClick: false 
+        })
         break;
       default:
         toast(text, {
           closeButton: <CloseButton />,
-          autoClose: 3000}
-        )
+          closeOnClick: false 
+        })
         break;
     }
   }
@@ -57,6 +57,7 @@ export default class ContactBody extends React.PureComponent {
     e.preventDefault();
     this.captcha.execute();
   }
+  
   onCaptchaChange(value) {
     if(value === null) {
       return;
