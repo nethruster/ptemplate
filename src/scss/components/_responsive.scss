@@ -18,6 +18,11 @@
     .pt-content-card__body__work-items__item {
         max-width: none;
     }
+
+    .pt-content-card__body__work-items__item__buttons a {
+        width: 100%;
+        min-width: 100px;
+    }
 }
 
 @media (max-width: 900px) {

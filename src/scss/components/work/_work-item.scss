@@ -24,6 +24,7 @@
         animation-delay: .1s;
         animation-fill-mode: both;
         opacity: 1;
+        width: 100%;
 
         &:only-child {
             max-width: none;
@@ -32,10 +33,12 @@
         &__image {
             max-height: 100%;
             align-self: center;
+            flex: .5;
         }
 
         &__data {
             padding: var(--base-pm);
+            flex: 5;
 
             h4 {
                 font-weight: 400;
@@ -65,6 +68,7 @@
 
         &__buttons {
             border-left: 1px solid rgba(0,0,0,.1);
+            flex: 1;
 
             a {
                 width: 100px;
