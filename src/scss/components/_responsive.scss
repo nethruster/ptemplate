@@ -101,7 +101,7 @@
         &__list {
             padding: var(--base-pm) 0;
             margin-top: 64px;
-            overflow: scroll;
+            overflow-y: scroll;
             height: calc(100% - 58px);
         }
 
@@ -133,7 +133,6 @@
     }
 
     .pt-content-card__about-container {
-        display: block;
         overflow: auto;
     }
 
@@ -187,12 +186,6 @@
     .pt-content-card__body__icons__icon {
         width: 72px;
         margin-top: calc(var(--base-pm) * 3);
-    }
-}
-
-@media (min-height: 650px) { 
-    .pt-content-card {
-        overflow: hidden;
     }
 }
 
