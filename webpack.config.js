@@ -50,7 +50,7 @@ const config = {
         }) : ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|svg|ico|xml)$/,
         loader: 'file-loader',
         options: {
           name: 'assets/[name].[ext]?[hash]',
