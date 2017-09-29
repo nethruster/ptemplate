@@ -2,6 +2,7 @@ const webpack = require('webpack');
   path = require('path'),
   ExtractTextPlugin = require("extract-text-webpack-plugin"),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
+  CopyWebpackPlugin = require('copy-webpack-plugin'),
 
   isProduction = process.argv.indexOf('-p') !== -1, // Check if we are in production mode
   extractStyles = new ExtractTextPlugin('styles.css');
@@ -70,5 +71,9 @@ const config = {
     }),
   ],
 };
-
+if(isProduction) {
+  config.plugins[config.plugins.length] = new CopyWebpackPlugin([
+    { from: path.join(__dirname, 'src', 'assets', 'icons'), to: path.join(__dirname, 'dist', 'assets', 'icons') }
+  ]);
+}
 module.exports = config;
