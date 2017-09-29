@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {profile} from '../../config.js';
+
 export default class Home extends React.PureComponent {
   render() {
     return (
@@ -8,7 +10,7 @@ export default class Home extends React.PureComponent {
           <polygon points="0,200 200,0 200,200" />
         </svg>
         <div className="pt-content-card__header__image flex flex-main-center">
-          <img src="./assets/avatar.svg" alt={this.props.profile.fullName} />
+          <img src={`./assets/${profile.avatarPath}`} alt={this.props.profile.fullName} />
         </div>
         <h1 className="pt-content-card__header__title-name ta-c">{this.props.profile.fullName}</h1>
         <p className="pt-content-card__header__title-desc ta-c">{this.props.profile.description}</p>

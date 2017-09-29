@@ -1,6 +1,9 @@
 const profile = {
   fullName: "Website Owner",
   description: "FRONT-END DEVELOPER",
+  // The basepath is the assets folder
+  /// the file sould be imported in asstes-import.js
+  avatarPath: "avatar.svg",
   about: {
     title: `HEY THERE! 
     I'M WEBSITE OWNER`,
