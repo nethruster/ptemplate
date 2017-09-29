@@ -291,16 +291,3 @@ h4 {
     margin: 0;
     padding: 0;
 }
-
-::-webkit-scrollbar-track {
-    background: hsla(0,0%,100%,.08);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,.2);
-}
-
-::-webkit-scrollbar {
-    width: 6px!important;
-    height: 6px!important;
-}
