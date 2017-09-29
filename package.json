@@ -6,7 +6,8 @@
   "author": "Nethruster <support@nethruster.com>",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "build-gz": "webpack -p --env.compress"
   },
   "license": "MIT",
   "dependencies": {
@@ -26,6 +27,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "compression-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
