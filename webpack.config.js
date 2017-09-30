@@ -80,7 +80,7 @@ module.exports = env => {
     ]);
   }
 
-  if(env.compress) {
+  if(env && env.compress) {
     config.plugins[config.plugins.length] = new CompressionPlugin({
       algorithm: "gzip",
       test: /\.(html|js|css|png|jpg|json|svg|xml)$/,
