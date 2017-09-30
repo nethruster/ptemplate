@@ -1,12 +1,10 @@
 import React from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { ToastContainer, toast } from 'react-toastify';
 
 import Icon from '../partials/icon.jsx';
 
 import sendToForm from '../../helpers/send-to-form.js';
 
-import { profile, ReCAPTCHAKey } from '../../config.js'
+import { profile, ReCAPTCHAKey } from '../../config.js';
 
 const CloseButton = ({ closeToast }) => (
   <span className="toastify-dismiss" onClick={closeToast}>Close</span>
@@ -20,10 +18,25 @@ export default class ContactBody extends React.PureComponent {
       name: "",
       email: "",
       message: "",
-      isFormLoading: false
+      isFormLoading: false,
+      toastify: {
+        toast: null,
+        ToastContainer: null
+      },
+      ReCAPTCHA: null
     };
     
     this.captcha = null;
+
+    (async function(){
+      let toastify = await import(/*webpackChunkName: "toastify"*/'react-toastify');
+      this.setState({toastify: toastify});
+    }).bind(this)();
+
+    (async function(){
+      let ReCAPTCHA = (await import(/*webpackChunkName: "gRecaptcha"*/'react-google-recaptcha')).default;
+      this.setState({ReCAPTCHA: ReCAPTCHA});
+    }).bind(this)();
 
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onCaptchaChange = this.onCaptchaChange.bind(this);
@@ -33,19 +46,19 @@ export default class ContactBody extends React.PureComponent {
   notify (text, type) {
     switch(type) {
       case "Success":
-        toast.success(text, {
+        this.state.toastify.toast.success(text, {
           closeButton: <CloseButton />,
           closeOnClick: false 
         })
         break;
       case "Error":
-        toast.error(text, {
+        this.state.toastify.toast.error(text, {
           closeButton: <CloseButton />,
           closeOnClick: false 
         })
         break;
       default:
-        toast(text, {
+        this.state.toastify.toast(text, {
           closeButton: <CloseButton />,
           closeOnClick: false 
         })
@@ -103,18 +116,24 @@ export default class ContactBody extends React.PureComponent {
 
     return (
       <div className="pt-content-card__body pt-content-card__body__contact flex">
-      <ReCAPTCHA
-        ref={(el) => {this.captcha = el}}
-        className="recaptcha"
-        size="invisible"
-        sitekey={ReCAPTCHAKey}
-        onChange={this.onCaptchaChange}
-      />
+      {
+        this.state.ReCAPTCHA ? 
+          <this.state.ReCAPTCHA
+            ref={(el) => {this.captcha = el}}
+            className="recaptcha"
+            size="invisible"
+            sitekey={ReCAPTCHAKey}
+            onChange={this.onCaptchaChange}
+          /> : null
+      }
 
-      <ToastContainer 
-        position="bottom-left"
-        type="default"
-      />
+      {
+        this.state.toastify.ToastContainer  ?
+          <this.state.toastify.ToastContainer 
+            position="bottom-left"
+            type="default"
+          /> : null
+      }
       
       {
         profile.social.length > 0 &&

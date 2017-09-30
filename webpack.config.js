@@ -14,7 +14,15 @@ const APP_DIR = path.resolve(__dirname, 'src');
 module.exports = env => {
   const config = {
     devtool: isProduction ? undefined : 'cheap-module-source-map',  
-    entry: APP_DIR + '/index.jsx',
+    entry: {
+      'main': APP_DIR + '/index.jsx',
+      'vendor': [
+        'react',
+        'react-dom',
+        'react-ink',
+        'react-router-dom'
+      ]
+    },
     output: {
       path: BUILD_DIR,
       publicPath: '/',
@@ -73,6 +81,7 @@ module.exports = env => {
         hash: true,
         template: './src/index.html',
       }),
+      new webpack.optimize.CommonsChunkPlugin("vendor")
     ],
   };
 
@@ -85,8 +94,7 @@ module.exports = env => {
   if(env && env.compress) {
     config.plugins[config.plugins.length] = new CompressionPlugin({
       algorithm: "gzip",
-      test: /\.(html|js|css|png|jpg|json|svg|xml)$/,
-      minRatio: 1.0
+      test: /\.(html|js|css|png|jpg|json|svg|xml)$/
     });
   }
 
