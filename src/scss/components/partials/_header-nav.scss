@@ -8,14 +8,10 @@
         background-color: transparentize(#fff, .9);
         border-radius: var(--base-br);
 
-        svg {
-            width: 30px;
-        }
+        svg { width: 30px; }
     }
 
-    button {
-        display: none;
-    }
+    button { display: none; }
 
     &__title {
         flex: 2;

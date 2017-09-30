@@ -27,7 +27,5 @@
         @include  transition_come-in(2);
     }
 
-    &__title-desc {
-        opacity: .7;
-    }
+    &__title-desc { opacity: .7; }
 }

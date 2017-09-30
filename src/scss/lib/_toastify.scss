@@ -2,15 +2,15 @@
     from {
         opacity: 0;
         transform: translate3d(0, 200px, 0);
+    } to { 
+        transform: translate3d(0, 0, 0); 
     }
-
-    to { transform: translate3d(0, 0, 0); }
 }
 
 @keyframes toastify-bounceOutDown {
-    from { transform: translate3d(0, 0, 0); }
-
-    to {
+    from { 
+        transform: translate3d(0, 0, 0); 
+    } to {
         opacity: 0;
         transform: translate3d(0, 200px, 0); 
     }
@@ -77,9 +77,7 @@
     font-family: sans-serif;
     padding: calc(var(--base-pm) * 1.5);
 
-    &:not(:last-child) {
-        margin-bottom: var(--base-pm);
-    }
+    &:not(:last-child) { margin-bottom: var(--base-pm); }
 }
 
 .toastify__body { 
@@ -99,9 +97,7 @@
     transition: background-color .2s;
     color: #f1f1f1;
 
-    &:hover {
-        background-color: rgba(255,255,255, .2);
-    }
+    &:hover { background-color: rgba(255,255,255, .2); }
 }
 
 .toastify-content--default {

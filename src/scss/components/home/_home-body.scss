@@ -25,13 +25,9 @@
             width: 28px;
             transition: fill .2s;
 
-            &:not(:hover) {
-                fill: #263238!important;
-            }
+            &:not(:hover) { fill: #263238!important; }
         }
 
-        &:not(:last-child) {
-            margin-right: calc(var(--base-pm) * 2);
-        }
+        &:not(:last-child) { margin-right: calc(var(--base-pm) * 2); }
     }
 }

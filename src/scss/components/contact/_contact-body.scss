@@ -24,9 +24,7 @@
             justify-content: flex-start;
             border-radius: var(--base-br);
             
-            svg {
-                width: 22px;
-            }
+            svg { width: 22px; }
         }
     }
 
@@ -57,9 +55,7 @@
             align-self: flex-start;
             min-width: 150px;
 
-            svg {
-                width: 17px;
-            }
+            svg { width: 17px; }
 
             &[disabled] {
                 background-color: #b0bec5;
@@ -117,9 +113,7 @@
                 stroke-dashoffset: -20;
             }
             
-            .line .focus {
-                stroke: var(--input-color-focus);
-            }
+            .line .focus { stroke: var(--input-color-focus); }
             
             .line .valid,
             .validation.valid {

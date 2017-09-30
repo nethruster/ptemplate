@@ -11,9 +11,7 @@
         border-radius: calc(var(--base-br) / 2);
         position: relative;
 
-        &:hover {
-            background-color: transparentize(darken(#fff, 5%), .2);
-        }
+        &:hover { background-color: transparentize(darken(#fff, 5%), .2); }
     }
 
     // Hide native checkbox
@@ -39,12 +37,6 @@
             margin-left: calc(var(--base-pm) * 2);
             width: 100%;
         }
-
-        // &__badge {
-        //     padding: 0 4px;
-        //     background: transparentize(darken(#fff, 15%), .2);
-        //     border-radius: 4px;
-        // }
 
         &:before {
             position: absolute;
@@ -92,47 +84,20 @@
         }
     }
 
-input[type=checkbox]:focus + .md__checkbox-material .md__checkbox-check:after {
-    opacity: 0.2;
-}
+    input[type=checkbox]:focus + .md__checkbox-material .md__checkbox-check:after {
+        opacity: 0.2;
+    }
 
-input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:before {
-    box-shadow:
-        0 0 0 10px,
-        10px -10px 0 10px,
-        32px 0px 0 20px,
-        0px 32px 0 20px,
-        -5px 5px 0 10px,
-        20px -12px 0 11px;
-    animation: checkbox-on var(--md-checkbox-animation-check) forwards ease-out;
-}
-
-// input[type=checkbox]:not(:checked) + .md__checkbox-material:before {
-//     animation: rippleOff var(--md-checkbox-animation-ripple) forwards ease-out;
-// }
-
-// input[type=checkbox]:checked + .md__checkbox-material:before {
-//     animation: rippleOn var(--md-checkbox-animation-ripple) forwards ease-out;
-// }
-
-// Ripple effect on click
-// input[type=checkbox]:not(:checked) + .md__checkbox-material .md__checkbox-check:after {
-//     animation: rippleOff var(--md-checkbox-animation-ripple) forwards ease-out;
-// }
-
-// input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:after {
-//     animation: rippleOn var(--md-checkbox-animation-ripple) forwards ease-out;
-// }
-
-    // // Style for disabled inputs
-    // input[type=checkbox][disabled]:not(:checked) ~ .md__checkbox-material .md__checkbox-check:before,
-    // input[type=checkbox][disabled] + .circle {
-    //   opacity: 0.5;
-    // }
-    // input[type=checkbox][disabled] + .md__checkbox-material .md__checkbox-check:after {
-    //   background-color: var(--md-lightbg-text;
-    //   transform: rotate(-45deg);
-    // }
+    input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:before {
+        box-shadow:
+            0 0 0 10px,
+            10px -10px 0 10px,
+            32px 0px 0 20px,
+            0px 32px 0 20px,
+            -5px 5px 0 10px,
+            20px -12px 0 11px;
+        animation: checkbox-on var(--md-checkbox-animation-check) forwards ease-out;
+    }
 }
 
   // Animations
@@ -239,25 +204,3 @@ input[type=checkbox]:checked + .md__checkbox-material .md__checkbox-check:before
             0px 0px 0 0px inset;
     }
 }
-
-// @keyframes rippleOn {
-//     0% {
-//         opacity: 0.5;
-//     }
-
-//     100% {
-//         opacity: 0;
-//         transform: scale(13,13);
-//     }
-// }
-
-// @keyframes rippleOff {
-//     0% {
-//         opacity: 0.5;
-//     }
-
-//     100% {
-//         opacity: 0;
-//         transform: scale(13,13);
-//     }
-// }

@@ -54,9 +54,7 @@ body {
 
 header,
 nav,
-section {
-    display: block;
-}
+section { display: block; }
 
 /**
 * Correct the font size and margin on `h1` elements within `section` and
@@ -88,47 +86,20 @@ a {
 */
 
 b,
-strong {
-    font-weight: inherit;
-}
+strong { font-weight: inherit; }
 
 /**
 * Add the correct font weight in Chrome, Edge, and Safari.
 */
 
 b,
-strong {
-    font-weight: bolder;
-}
+strong { font-weight: bolder; }
 
 /**
 * Add the correct font size in all browsers.
 */
 
-small {
-    font-size: 80%;
-}
-
-/* Embedded content
-    ========================================================================== */
-
-/**
-* Add the correct display in IE 9-.
-*/
-
-audio,
-video {
-    display: inline-block;
-}
-
-/**
-* Add the correct display in iOS 4-7.
-*/
-
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
+small { font-size: 80%; }
 
 /**
 * Remove the border on images inside links in IE 10-.
@@ -143,9 +114,7 @@ img {
 * Hide the overflow in IE.
 */
 
-svg:not(:root) {
-    overflow: hidden;
-}
+svg:not(:root) { overflow: hidden; }
 
 svg {
     fill: currentColor;
@@ -178,9 +147,7 @@ textarea {
 */
 
 button,
-input { /* 1 */
-    overflow: visible;
-}
+input { /* 1 */ overflow: visible; }
 
 /**
 * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -188,9 +155,7 @@ input { /* 1 */
 */
 
 button,
-select { /* 1 */
-    text-transform: none;
-}
+select { /* 1 */ text-transform: none; }
 
 /**
 * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
@@ -240,9 +205,7 @@ button {
 * Remove the default vertical scrollbar in IE.
 */
 
-textarea {
-    overflow: auto;
-}
+textarea { overflow: auto; }
 
 /**
 * 1. Add the correct box sizing in IE 10-.
@@ -256,30 +219,13 @@ textarea {
 }
 
 /**
-* 1. Correct the inability to style clickable types in iOS and Safari.
-* 2. Change font properties to `inherit` in Safari.
-*/
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button; /* 1 */
-    font: inherit; /* 2 */
-}
-
-/* Hidden
-    ========================================================================== */
-
-/**
 * Add the correct display in IE 10-.
 */
 
-[hidden] {
-    display: none;
-}
+[hidden] { display: none; }
 
 ul,
-li {
-    list-style: none;
-}
+li { list-style: none; }
 
 ul,
 li,

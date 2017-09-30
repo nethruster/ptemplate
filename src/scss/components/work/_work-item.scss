@@ -40,9 +40,7 @@
             padding: var(--base-pm);
             flex: 5;
 
-            h4 {
-                font-weight: 400;
-            }
+            h4 { font-weight: 400; }
 
             p {
                 font-size: .8em;
@@ -59,9 +57,7 @@
                     border-radius: calc(var(--base-br) * 2);
                     padding: calc(var(--base-pm) / 2.5) calc(var(--base-pm) / 1.5);
 
-                    &:not(:last-child) {
-                        margin-right: var(--base-pm);
-                    }
+                    &:not(:last-child) { margin-right: var(--base-pm); }
                 }
             }
         }
@@ -76,9 +72,7 @@
                 font-size: .8em;
                 transition: background-color .3s;
 
-                &:hover {
-                    background-color: rgba(0,0,0,.05);
-                }
+                &:hover { background-color: rgba(0,0,0,.05); }
             }
         }
     }

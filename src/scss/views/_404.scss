@@ -23,13 +23,9 @@
             color: lighten(#4b4b4b, 10%);
             text-align: center;
 
-            &:hover {
-                box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.14);
-            }
+            &:hover { box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.14); }
         }
     }
 
-    svg {
-        width: 120px;
-    }
+    svg { width: 120px; }
 }

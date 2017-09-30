@@ -1,13 +1,9 @@
 @media (min-width: 1250px) {
-    .pt-content-card {
-        overflow: hidden;
-    }
+    .pt-content-card { overflow: hidden; }
 }
 
 @media (max-width: 1250px) {
-    .pt-content-card {
-        max-height: none;
-    }
+    .pt-content-card { max-height: none; }
 
     .pt-content-card__body__work-items {
         display: flex;
@@ -15,9 +11,7 @@
         align-items: center;
     }
 
-    .pt-content-card__body__work-items__item {
-        max-width: none;
-    }
+    .pt-content-card__body__work-items__item { max-width: none; }
 
     .pt-content-card__body__work-items__item__buttons a {
         width: 100%;
@@ -26,14 +20,10 @@
 }
 
 @media (max-width: 900px) {
-    .pt-content-card__body__contact {
-        flex-direction: column;
-    }
+    .pt-content-card__body__contact { flex-direction: column; }
 
     .pt-content-card__body__contact__social,
-    .pt-content-card__body__contact__form {
-        flex: initial;
-    }
+    .pt-content-card__body__contact__form { flex: initial; }
 
     .pt-content-card__header--nav {
         position: fixed;
@@ -42,13 +32,9 @@
 
     .pt-content-card__body__contact,
     .pt-content-card__body__work,
-    .pt-content-card__body__about {
-        margin-top: calc(var(--base-pm) * 8);
-    }
+    .pt-content-card__body__about { margin-top: calc(var(--base-pm) * 8); }
 
-    .pt-content-card__home-container--home {
-        height: 100vh;
-    }
+    .pt-content-card__home-container--home { height: 100vh; }
 
     .toast-notification {
         width: 100%!important;
@@ -64,14 +50,10 @@
 }
 
 @media (max-width: 700px) { 
-    .md__checkbox label {
-        padding: var(--base-pm) calc(var(--base-pm) * 4);
-    }
+    .md__checkbox label { padding: var(--base-pm) calc(var(--base-pm) * 4); }
 
     .pt-content-card__header--nav {
-        button {
-            display: flex;
-        }
+        button { display: flex; }
     }
 
     .pt-content-card__body__work-filters {
@@ -89,9 +71,7 @@
         z-index: 210;
         transition: transform .3s;
 
-        button {
-            display: flex;
-        }
+        button { display: flex; }
 
         &.filters-open {
             pointer-events: initial;
@@ -139,9 +119,7 @@
     .pt-content-card__body__about {
         display: block;
 
-        &__presentation { 
-            padding-top: calc(var(--base-pm) * 6);
-        }
+        &__presentation { padding-top: calc(var(--base-pm) * 6); }
     }
 }
 
@@ -163,25 +141,18 @@
         max-width: none;
         border-radius: 0;
 
-        &:first-child {
-            margin-top: calc(var(--base-pm) * 2);
-        }
+        &:first-child { margin-top: calc(var(--base-pm) * 2); }
     }
 
-    .pt-content-card__body__work-items__item__image {
-        max-width: 100px;
-    }
+    .pt-content-card__body__work-items__item__image { max-width: 100px; }
 
     .pt-content-card__body__work-items__item__buttons {
         flex-direction: row;
-        a {
-            padding: calc(var(--base-pm) * 2);
-        }
+
+        a { padding: calc(var(--base-pm) * 2); }
     }
 
-    .pt-content-card__body__work-items__item__data__tags {
-        display: none;
-    }
+    .pt-content-card__body__work-items__item__data__tags { display: none; }
 
     .pt-content-card__body__icons__icon {
         width: 72px;
@@ -190,15 +161,11 @@
 }
 
 @media (max-height: 650px) {
-    .pt-content-card {
-        max-width: none;
-    }
+    .pt-content-card { max-width: none; }
 }
 
 @media (max-height: 530px) {
-    .pt-content-card__home-container--home {
-        height: auto;
-    }
+    .pt-content-card__home-container--home { height: auto; }
 }
 
 @media only screen and (max-width: 480px) {
@@ -211,15 +178,17 @@
         left: 0;
         bottom: 0;
         margin: 0;
+
     } 
 
-    .toastify-content { margin-bottom: 0; }
+    .toastify-content {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
 }
 
 @media (max-height: 400px) {
-    .pt-content-card__body__work-items {
-        display: block;
-    }
+    .pt-content-card__body__work-items { display: block; }
 
     #pt-app {
         min-height: 100%;
@@ -227,10 +196,8 @@
     }
 }
 
-@media (max-height: 470px) {
-    .pt-content-card__body__work-items {
-        flex-wrap: nowrap;
-    }
+@media (max-height: 470px) { 
+    .pt-content-card__body__work-items { flex-wrap: nowrap; }
 }
 
 

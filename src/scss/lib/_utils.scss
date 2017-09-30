@@ -3,55 +3,37 @@ General utils
 */
 
 // Cursor pointer
-.pointer {
-    cursor: pointer;
-}
+.pointer { cursor: pointer; }
 
 /* 
  * Flexbox utils 
  */
 
-.flex {
-    display: flex;
-}
+.flex { display: flex; }
 
 // Flex direction
-.flex-dc {
-    flex-direction: column;
-}
+.flex-dc { flex-direction: column; }
 
-.flex-full-center {
-    justify-content: center;
+.flex-full-center { 
+    justify-content: center; 
     align-items: center;
 }
 
 // Center within the main axis
-.flex-main-center {
-    justify-content: center;
-}
+.flex-main-center { justify-content: center; }
 
 // Center within the cross-axis
-.flex-cross-center {
-    align-items: center;
-}
+.flex-cross-center { align-items: center; }
 
 // Justify space between
-.flex-sb {
-    justify-content: space-between;
-}
+.flex-sb { justify-content: space-between; }
 
 // Justify space around
-.flex-sa {
-    justify-content: space-around;
-}
+.flex-sa { justify-content: space-around; }
 
 /* 
  * Text align
  */
-.ta-c {
-    text-align: center;
-}
+.ta-c { text-align: center; }
 
-.ta-r {
-    text-align: right;
-}
+.ta-r { text-align: right; }

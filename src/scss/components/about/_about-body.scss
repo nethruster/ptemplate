@@ -45,14 +45,10 @@
             @include transition_come-in(4);
 
             a {
-                svg {
-                    transition: fill .2s;
-                }
+                svg { transition: fill .2s; }
 
                 &:not(:hover) {
-                    svg {
-                        fill: #546e7a!important;
-                    }
+                    svg { fill: #546e7a!important; }
                 }
             }
         }
