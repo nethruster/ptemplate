@@ -1,0 +1,35 @@
+.pt-content-card__404-container {
+    width: 100%;
+    height: 100%;
+    color: transparentize(lighten(#303a45, 20%), .2);
+
+    p {
+        text-transform: uppercase;
+        font-size: 1.3em;
+        font-weight: 500;
+        text-align: center;
+        padding: calc(var(--base-pm) * 2);
+    }
+
+    .pt-content-card__body__404 {
+        div {
+            background-color: #fff;
+            border-radius: var(--base-br);
+            padding: var(--base-pm) calc(var(--base-pm) * 4);
+            margin: calc(var(--base-pm) * 4);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+            cursor: pointer;
+            transition: box-shadow .3s ease;
+            color: lighten(#4b4b4b, 10%);
+            text-align: center;
+
+            &:hover {
+                box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.14);
+            }
+        }
+    }
+
+    svg {
+        width: 120px;
+    }
+}
