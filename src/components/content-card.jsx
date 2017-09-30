@@ -1,20 +1,17 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from '../views/home.jsx';
-import About from '../views/about.jsx';
-import Work from '../views/work.jsx';
-import Contact from '../views/contact.jsx';
+import asyncComponent from './async-component.jsx';
 
 export default class ContentCard extends React.Component {
   render() {
     return (
       <div className="pt-content-card">
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/work' component={Work} />
-          <Route exact path='/contact' component={Contact} />
+          <Route exact path='/' component={asyncComponent(() => import(/*webpackChunkName: "home"*/'../views/home.jsx').then(module => module.default))} />
+          <Route exact path='/about' component={asyncComponent(() => import(/*webpackChunkName: "about"*/'../views/about.jsx').then(module => module.default))} />
+          <Route exact path='/work' component={asyncComponent(() => import(/*webpackChunkName: "work"*/'../views/work.jsx').then(module => module.default))} />
+          <Route exact path='/contact' component={asyncComponent(() => import(/*webpackChunkName: "contact"*/'../views/contact.jsx').then(module => module.default))} />
         </Switch>
       </div>
     );

@@ -14,7 +14,9 @@ const config = {
   entry: APP_DIR + '/index.jsx',
   output: {
     path: BUILD_DIR,
-    filename: 'ptemplate.js'
+    publicPath: '/',
+    filename: '[name].js',
+    chunkFilename: '[name].js'
   },
   devServer: {
     host: 'localhost',

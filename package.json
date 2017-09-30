@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "babel-preset-stage-0": "^6.24.1",
     "react": "next",
     "react-async-script": "^0.9.1",
     "react-dom": "next",
