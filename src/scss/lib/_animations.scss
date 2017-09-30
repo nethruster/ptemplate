@@ -28,3 +28,14 @@
         opacity: 1;
     }
 }
+
+// Loader
+@keyframes opacitychange{
+    0%, 100%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 1;
+    }
+}

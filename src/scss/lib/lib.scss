@@ -1,6 +1,7 @@
 @import 'vars';  // Global App variables
 @import 'reset'; // CSS reset and default values
 @import 'mixins'; // Some CSS transitions
-@import 'transitions'; // Some CSS transitions
+@import 'animations'; // CSS animations
 @import 'utils'; // Common used utils
-@import 'toastify';
+@import 'toastify'; // Feedback toast CSS
+@import 'loader'; // Button loader CSS

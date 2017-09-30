@@ -60,6 +60,12 @@
             svg {
                 width: 17px;
             }
+
+            &[disabled] {
+                background-color: #b0bec5;
+                cursor: not-allowed;
+                color: #fff;
+            }
         }
 
         &__row {

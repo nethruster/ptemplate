@@ -114,6 +114,40 @@ export default class ContactBody extends React.PureComponent {
       </a>
     ));
 
+    let isLoading = !this.state.ReCAPTCHA || !this.state.toastify.ToastContainer;
+
+    let buttonContent;
+
+    if (isLoading) {
+      buttonContent = (
+        <div className={`loader-container flex flex-main-center`}>
+            Loading
+            <div className="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+      )
+    } else if (this.state.isFormLoading){
+      buttonContent = (
+        <div className={`loader-container flex flex-main-center`}>
+            Sending
+            <div className="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+      )
+    } else {
+      buttonContent = (
+        <div className={`flex flex-main-center`}>
+            Send
+        </div>
+      )
+    }
+
     return (
       <div className="pt-content-card__body pt-content-card__body__contact flex">
       {
@@ -128,7 +162,7 @@ export default class ContactBody extends React.PureComponent {
       }
 
       {
-        this.state.toastify.ToastContainer  ?
+        this.state.toastify.ToastContainer ?
           <this.state.toastify.ToastContainer 
             position="bottom-left"
             type="default"
@@ -175,7 +209,9 @@ export default class ContactBody extends React.PureComponent {
             </div>
 
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
-              <button className="pt-content-card__body__contact__form__send-button flex flex-full-center pointer" disabled={this.state.isFormLoading}>Send&nbsp;<Icon iconName="send" /></button>
+              <button className="pt-content-card__body__contact__form__send-button flex flex-full-center pointer" disabled={this.state.isFormLoading || isLoading}>
+                { buttonContent }
+              </button>
             </div>
           </form>
         </div>
