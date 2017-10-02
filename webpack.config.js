@@ -17,8 +17,8 @@ module.exports = env => {
     entry: {
       'main': APP_DIR + '/index.jsx',
       'vendor': [
-        'react',
-        'react-dom',
+        'preact',
+        'preact-compat',
         'react-ink',
         'react-router-dom'
       ]
@@ -71,7 +71,24 @@ module.exports = env => {
         },
       ]
     },
+    "resolve": {
+      "alias": {
+        "react": "preact-compat",
+        "react-dom": "preact-compat"
+      }
+    },
     plugins: [
+      isProduction ?
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify('production')
+        }
+      }) :
+      new webpack.DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify('development')
+        }
+      }),
       isProduction ? extractStyles : new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
       new HtmlWebpackPlugin({

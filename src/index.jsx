@@ -7,6 +7,10 @@ import './assets-imports.js';
 
 import ContentCard from './components/content-card.jsx';
 
+if (module.hot) {
+  require('preact/debug');
+}
+
 class App extends React.Component {
   render() {
     return (

@@ -12,10 +12,9 @@
   "license": "MIT",
   "dependencies": {
     "ajax-promises": "^1.0.3",
-    "react": "next",
-    "react-async-script": "^0.9.1",
-    "react-dom": "next",
-    "react-google-recaptcha": "^0.9.7",
+    "preact": "^8.2.5",
+    "preact-compat": "^3.17.0",
+    "preact-google-recaptcha": "^0.1.0",
     "react-ink": "^6.2.0",
     "react-router-dom": "^4.1.2",
     "react-toastify": "^2.0.0-rc.3"
