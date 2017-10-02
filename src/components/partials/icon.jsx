@@ -2,9 +2,9 @@ import React from 'react';
 
 export default class Icon extends React.PureComponent {
   render() {
-    const iconStyle = {
+    let  iconStyle = this.props.iconColor ? {
       fill: this.props.iconColor
-    };
+    } : null;
 
     return (
       <svg style={iconStyle} viewBox="0 0 24 24"><use xlinkHref={`assets/icons.svg#${this.props.iconName}`}></use></svg>
