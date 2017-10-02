@@ -78,15 +78,9 @@ module.exports = env => {
       }
     },
     plugins: [
-      isProduction ?
       new webpack.DefinePlugin({
         'process.env': {
-          'NODE_ENV': JSON.stringify('production')
-        }
-      }) :
-      new webpack.DefinePlugin({
-        'process.env': {
-          'NODE_ENV': JSON.stringify('development')
+          'NODE_ENV': isProduction ? JSON.stringify('production') : JSON.stringify('development')
         }
       }),
       isProduction ? extractStyles : new webpack.HotModuleReplacementPlugin(),
