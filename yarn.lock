@@ -2125,8 +2125,8 @@ extglob@^0.3.1:
     is-extglob "^1.0.0"
 
 extract-text-webpack-plugin@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.0.tgz#90caa7907bc449f335005e3ac7532b41b00de612"
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.1.tgz#605a8893faca1dd49bb0d2ca87493f33fd43d102"
   dependencies:
     async "^2.4.1"
     loader-utils "^1.1.0"
@@ -4053,9 +4053,9 @@ preact-compat@^3.17.0:
     prop-types "^15.5.8"
     standalone-react-addons-pure-render-mixin "^0.1.1"
 
-preact-google-recaptcha@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/preact-google-recaptcha/-/preact-google-recaptcha-0.1.0.tgz#e150dd8cad89d46949faa3f80e54046b7d52f56d"
+preact-grecaptcha@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/preact-grecaptcha/-/preact-grecaptcha-0.2.1.tgz#14ba93702f9a6ed353fbd24eb4d8febc0b1e8a41"
 
 preact-render-to-string@^3.6.0:
   version "3.6.3"

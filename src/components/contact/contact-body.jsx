@@ -34,7 +34,7 @@ export default class ContactBody extends React.PureComponent {
     }).bind(this)();
 
     (async function(){
-      let ReCAPTCHA = (await import(/*webpackChunkName: "gRecaptcha"*/'preact-google-recaptcha')).default;
+      let ReCAPTCHA = (await import(/*webpackChunkName: "gRecaptcha"*/'preact-grecaptcha')).default;
       this.setState({ReCAPTCHA: ReCAPTCHA});
     }).bind(this)();
 

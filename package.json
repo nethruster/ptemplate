@@ -14,7 +14,7 @@
     "ajax-promises": "^1.0.3",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
-    "preact-google-recaptcha": "^0.1.0",
+    "preact-grecaptcha": "^0.2.1",
     "react-ink": "^6.2.0",
     "react-router-dom": "^4.1.2",
     "react-toastify": "^2.0.0-rc.3"
