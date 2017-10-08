@@ -47,9 +47,14 @@ export default class WorkItem extends React.PureComponent {
             {categoryTags}
           </div>
         </div>
-        <div className="pt-content-card__body__work-items__item__buttons flex flex-dc">
-          {linkTags}
-        </div>
+        {
+          (this.props.work.sourceCodeUrl || this.props.work.siteUrl) ?
+            <div className="pt-content-card__body__work-items__item__buttons flex flex-dc">
+              {linkTags}
+            </div>
+          :
+            null
+        }
       </div>
     );
   }
