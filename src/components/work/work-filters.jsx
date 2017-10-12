@@ -4,6 +4,10 @@ import WorkFilterItem from './work-filter-item.jsx';
 
 import Icon from '../partials/icon.jsx';
 
+import lang from 'lang';
+
+const langContext = lang.work;
+
 export default class WorkFilters extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -14,8 +18,8 @@ export default class WorkFilters extends React.PureComponent {
   allFiltersAreChecked() {
     let allFiltersChecked = true;
 
-    Object.keys(this.props.filters).forEach((fil) => {
-      if (!this.props.filters[fil]) {
+    Object.keys(this.props.filters).forEach((filter) => {
+      if (!this.props.filters[filter]) {
         allFiltersChecked = false;
       }
     });
@@ -32,10 +36,10 @@ export default class WorkFilters extends React.PureComponent {
         <button className="pt-content-card__header--nav__icon flex-full-center pointer" onClick={this.props.handleDrawerState}>
           <Icon iconName="close" />
         </button>
-        Categories
+        {langContext.categories}
       </p>
         <ul className="pt-content-card__body__work-filters__list flex flex-dc">
-          <WorkFilterItem name="All" value={this.allFiltersAreChecked()} handleFilterChange={this.props.handleAllFilterChange} />
+          <WorkFilterItem name={langContext.category_all} value={this.allFiltersAreChecked()} handleFilterChange={this.props.handleAllFilterChange} />
           {filters}
         </ul>
       </div>

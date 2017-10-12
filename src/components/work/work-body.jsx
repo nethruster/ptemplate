@@ -7,6 +7,9 @@ import Icon from '../partials/icon.jsx';
 
 import { projects } from "../../config.js";
 
+import lang from 'lang';
+const langContext = lang.work;
+
 export default class WorkBody extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -54,7 +57,7 @@ export default class WorkBody extends React.PureComponent {
       return (
         <p className="no-projects-text flex flex-dc flex-cross-center">
           <Icon iconName="person" />
-          Whoops! There's nothing here yet!
+          {langContext.no_projects}
         </p>
       );
     }
@@ -79,7 +82,6 @@ export default class WorkBody extends React.PureComponent {
   }
 
   render() {
-
     let computeWorkExtraStyle = {};
 
     if(this.state.projects.length <= 0) {

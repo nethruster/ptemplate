@@ -1,4 +1,7 @@
 import { formUrl } from "../config";
+import lang from 'lang';
+
+const langContext = lang.contact.form.validation;
 
 function validateName(name) {
   return !!name;
@@ -40,31 +43,31 @@ async function sendData(name, email, message, gRecaptchaResponse) {
 function sendToForm(name, email, message, gRecaptchaResponse) {
   return new Promise((resolve, reject) => {
     if (!validateName(name)) {
-      return reject("Invalid name");
+      return reject(String(langContext.invalid_name));
     }
 
     if (!validateEmail(email)) {
-      return reject("Invalid email");
+      return reject(String(langContext.invalid_email));
     }
 
     if (!validateMessage(message)) {
-      return reject("Invalid message");
+      return reject(String(langContext.invalid_message));
     }
 
     if (!validateGRecaptchaResponse(gRecaptchaResponse)) {
-      return reject("Invalid gRecaptchaResponse");
+      return reject(String(langContext.invalid_grecaptcha));
     }
 
     sendData(name, email, message, gRecaptchaResponse)
       .then(response => {
         if (response.status >= 200 && response.status < 300) {
-          resolve("Message sent successfully");
+          resolve(String(langContext.success));
         } else {
-          reject("Server returned a an invalid response");
+          reject(String(langContext.server_error));
         }
       })
       .catch(err => {
-        reject("Connection Error");
+        reject(String(langContext.conection_error));
       });
   });
 }

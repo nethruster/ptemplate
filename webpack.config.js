@@ -20,7 +20,8 @@ module.exports = env => {
         'preact',
         'preact-compat',
         'react-ink',
-        'react-router-dom'
+        'react-router-dom',
+        'lang'
       ]
     },
     output: {
@@ -75,7 +76,11 @@ module.exports = env => {
       "alias": {
         "react": "preact-compat",
         "react-dom": "preact-compat"
-      }
+      },
+      "modules": [
+        APP_DIR + '/assets/lang/',
+        'node_modules'
+      ]
     },
     plugins: [
       new webpack.DefinePlugin({

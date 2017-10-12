@@ -2,6 +2,10 @@ import React from 'react';
 
 import Icon from './../partials/icon.jsx';
 
+import lang from 'lang';
+
+const langContext = lang.work;
+
 export default class WorkItem extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -16,7 +20,7 @@ export default class WorkItem extends React.PureComponent {
       linkTags[linkTags.length] = (
         <a href={this.props.work.siteUrl} key={linkTags.length} target="_blank" rel="noopener" title={`${this.props.work.title} Website`} className="flex flex-dc flex-full-center">
           <Icon iconName="web" />
-          <p>Visit Website</p>
+          <p>{langContext.website}</p>
         </a>
       )
     }
@@ -25,7 +29,7 @@ export default class WorkItem extends React.PureComponent {
       linkTags[linkTags.length] = (
         <a href={this.props.work.sourceCodeUrl} key={linkTags.length} target="_blank" rel="noopener" title={`${this.props.work.title} Source Code`} className="flex flex-dc flex-full-center">
           <Icon iconName="code" />
-          <p>Source Code</p>
+          <p>{langContext.source}</p>
         </a>
       )
     }

@@ -4,6 +4,10 @@ import Icon from '../partials/icon.jsx';
 
 import linebreakToBr from "../../helpers/linebreak-to-br";
 
+import lang from 'lang';
+
+const langContext = lang.about;
+
 export default class AboutBody extends React.PureComponent {
   render() {
     const {about} = this.props.profile;
@@ -26,7 +30,7 @@ export default class AboutBody extends React.PureComponent {
             {linebreakToBr(about.description)}
           </p>
 
-          <h3>You'll find me on:</h3>
+          <h3>{langContext.find_me}</h3>
           <div className="pt-content-card__body__about__details__net-icons flex-sa">
             {findMeOnElements}
           </div>

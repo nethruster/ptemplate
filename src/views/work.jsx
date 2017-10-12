@@ -3,6 +3,10 @@ import React from 'react';
 import Nav from '../components/partials/nav.jsx';
 import WorkBody from '../components/work/work-body.jsx';
 
+import lang from 'lang';
+
+const langContext = lang.home;
+
 export default class Work extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -36,7 +40,7 @@ export default class Work extends React.PureComponent {
   render() {
     return (
       <div className="pt-content-card__work-container flex flex-dc">
-        <Nav icon="folder" title="my work" handleDrawerState={this.handleDrawerState} isFiltersOpen={this.state.isFiltersOpen} />
+        <Nav icon="folder" title={langContext.work} handleDrawerState={this.handleDrawerState} isFiltersOpen={this.state.isFiltersOpen} />
         <WorkBody handleDrawerState={this.handleDrawerState} isFiltersOpen={this.state.isFiltersOpen} />
       </div>
     );

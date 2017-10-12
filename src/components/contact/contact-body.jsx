@@ -6,8 +6,12 @@ import sendToForm from '../../helpers/send-to-form.js';
 
 import { profile, ReCAPTCHAKey } from '../../config.js';
 
+import lang from 'lang';
+
+const langContext = lang.contact;
+
 const CloseButton = ({ closeToast }) => (
-  <span className="toastify-dismiss" onClick={closeToast}>Close</span>
+  <span className="toastify-dismiss" onClick={closeToast}>{langContext.toast.close}</span>
 );
 
 export default class ContactBody extends React.PureComponent {
@@ -121,7 +125,7 @@ export default class ContactBody extends React.PureComponent {
     if (isLoading) {
       buttonContent = (
         <div className={`loader-container flex flex-main-center`}>
-            Loading
+            {langContext.loading}
             <div className="loader">
                 <span></span>
                 <span></span>
@@ -132,7 +136,7 @@ export default class ContactBody extends React.PureComponent {
     } else if (this.state.isFormLoading){
       buttonContent = (
         <div className={`loader-container flex flex-main-center`}>
-            Sending
+            {langContext.sending}
             <div className="loader">
                 <span></span>
                 <span></span>
@@ -143,7 +147,7 @@ export default class ContactBody extends React.PureComponent {
     } else {
       buttonContent = (
         <div className={`flex flex-main-center`}>
-            Send
+            {langContext.send}
         </div>
       )
     }
@@ -179,7 +183,7 @@ export default class ContactBody extends React.PureComponent {
           <form className="flex flex-dc flex-full-center" onSubmit={this.onFormSubmit}>
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
               <input id="name" className="pt-content-card__body__contact__form__input" type="text" onChange={this.onInputValueChange}/>
-              <label htmlFor="name" className="pt-content-card__body__contact__form__label">What's your name?</label>
+              <label htmlFor="name" className="pt-content-card__body__contact__form__label">{langContext.form.name}</label>
               <svg className="line" viewBox="0 0 40 2" preserveAspectRatio="none">
                 <path d="M0 1 L40 1" />
                 <path d="M0 1 L40 1" className="focus" />
@@ -189,7 +193,7 @@ export default class ContactBody extends React.PureComponent {
             </div>
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
               <input id="email" className="pt-content-card__body__contact__form__input" type="email" onChange={this.onInputValueChange}/>
-              <label htmlFor="email" className="pt-content-card__body__contact__form__label">What's your email?</label>
+              <label htmlFor="email" className="pt-content-card__body__contact__form__label">{langContext.form.email}</label>
               <svg className="line" viewBox="0 0 40 2" preserveAspectRatio="none">
                 <path d="M0 1 L40 1" />
                 <path d="M0 1 L40 1" className="focus" />
@@ -199,7 +203,7 @@ export default class ContactBody extends React.PureComponent {
             </div>
             <div className="pt-content-card__body__contact__form__row flex flex-dc flex-main-center">
               <textarea id="message" className="pt-content-card__body__contact__form__textarea" rows="6" onChange={this.onInputValueChange}/>
-              <label htmlFor="message" className="pt-content-card__body__contact__form__label">Please, explain yourself:</label>
+              <label htmlFor="message" className="pt-content-card__body__contact__form__label">{langContext.form.message}</label>
               <svg className="line" viewBox="0 0 40 2" preserveAspectRatio="none">
                 <path d="M0 1 L40 1" />
                 <path d="M0 1 L40 1" className="focus" />
