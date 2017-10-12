@@ -169,6 +169,7 @@ export default class ContactBody extends React.PureComponent {
         this.state.toastify.ToastContainer ?
           <this.state.toastify.ToastContainer 
             position="bottom-left"
+            autoClose={5000}
             type="default"
           /> : null
       }
