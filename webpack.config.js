@@ -16,12 +16,13 @@ module.exports = env => {
     devtool: isProduction ? undefined : 'cheap-module-source-map',  
     entry: {
       'main': APP_DIR + '/index.jsx',
+      'config': APP_DIR + '/config',
+      'lang': APP_DIR + '/assets/lang/lang',
       'vendor': [
         'preact',
         'preact-compat',
         'react-ink',
-        'react-router-dom',
-        'lang'
+        'react-router-dom'
       ]
     },
     output: {
@@ -97,7 +98,7 @@ module.exports = env => {
         hash: true,
         template: './src/index.html',
       }),
-      new webpack.optimize.CommonsChunkPlugin("vendor")
+      new webpack.optimize.CommonsChunkPlugin({names: ['vendor', 'config', 'lang']})
     ],
   };
 
