@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-27 24 100 100" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <circle id="a" cx="23" cy="74" r="50"/>
+  </defs>
+  <use fill="#F5EEE5" overflow="visible" xlink:href="#a"/>
+  <clipPath id="b">
+    <use overflow="visible" xlink:href="#a"/>
+  </clipPath>
+  <g clip-path="url(#b)">
+    <defs>
+      <path id="c" d="M36 96c0 4 4.7 5 7 5.7l23 6c3 1 5.6 3.4 7 6.5v9.8H-27v-9.8c1.3-3 4-5.5 7-6.6l23-6c2.3-.5 7-1.7 7-5.7V85h26v11z"/>
+    </defs>
+    <use fill="#E6C19C" overflow="visible" xlink:href="#c"/>
+    <clipPath id="d">
+      <use overflow="visible" xlink:href="#c"/>
+    </clipPath>
+    <path fill="#D4B08C" d="M23.2 35h.2c3.3 0 8.2.2 11.4 2 3.3 2 7.3 5.6 8.5 12 2.4 13.8-2 35.5-6.3 42.5-4 6.7-9.8 9.2-13.5 9.4H23c-3.8-.8-9.6-3-13.6-10C5.2 84.2.7 63 3 49c1.3-6.4 5.3-10 8.6-12 3.2-1.8 8-2 11.4-2h.2z" clip-path="url(#d)"/>
+  </g>
+  <path fill="#F2CEA5" d="M22.6 40c19 0 20.7 13.8 20.8 15 1 12-3 28.2-6.8 33.8-4 6-9.8 8-13.5 8.3-4 0-10-2-14-8-3.5-6-8-22-6.5-34 0-1 1.3-15 20.4-15z"/>
+</svg>
