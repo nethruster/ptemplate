@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+- stable
+
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "6e73b91172fc"
+  - COMMIT_AUTHOR_EMAIL: "support@nethruster.com"
