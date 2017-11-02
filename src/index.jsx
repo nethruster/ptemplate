@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import {profile} from './config.js';
 import './assets-imports.js';
 
 import ContentCard from './components/content-card.jsx';
