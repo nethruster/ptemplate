@@ -14,59 +14,26 @@
     <link rel="shortcut icon" href="./assets/icons/favicon.ico">
     <meta name="msapplication-config" content="./assets/icons/browserconfig.xml">
     <meta name="theme-color" content="#303a45">
+
+    <meta name="description" content="A personal website template that's not a pain in the ass to setup and use.">
+    <meta name="twitter:site" content="@nethruster">
+    <meta name="twitter:title" content="Personal Template | Nethruster">
+    <meta name="twitter:description" content="A personal website template that's not a pain in the ass to setup and use.">
+    <meta name="twitter:url" content="https://ptemplate.nethruster.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="./assets/icons/meta-img.png">
+    <meta property="og:title" content="Personal Template | Nethruster">
+    <meta property="og:description" content="A personal website template that's not a pain in the ass to setup and use.">
+    <meta property="og:url" content="https://ptemplate.nethruster.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/icons/meta-img.png">
+    <meta property="og:image:secure_url" content="./assets/icons/meta-img.png">
 </head>
 <body>
     <div id="pt-app" class="flex flex-full-center">
         <div class="view-loading">
             <style>
-                body {
-                    margin: 0;
-                }
-
-                .view-loading {
-                    width: 100vw;
-                    height: 100vh;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: absolute;
-                    background-image: linear-gradient(45deg,#2c3540,#455260);
-                    top: 0;
-                    left: 0;
-                }
-
-                @keyframes spinner-rotate {
-                    0% { transform:rotate(0deg); }
-                    100% { transform:rotate(270deg); }
-                }
-
-                @keyframes spinner-dash {
-                    0% { stroke-dashoffset:88px; }
-                    50% {
-                        stroke-dashoffset:22px;
-                        transform: rotate(135deg);
-                    }
-                    100% {
-                        stroke-dashoffset:88px;
-                        transform: rotate(450deg);
-                    }
-                }
-                .spinner { transform: translate(0, 0); }
-
-                .spinner > svg {
-                    animation: spinner-rotate 1.4s linear infinite;
-                    width: auto;
-                }
-
-                .spinner circle {
-                    stroke-dasharray: 88px;
-                    stroke-dashoffset: 0;
-                    transform-origin: center;
-                    animation: spinner-dash 1.4s ease-in-out infinite;
-                    stroke-width: 1;
-                    stroke-linecap: round;
-                    stroke: #f1f1f1;
-                }
+                body {margin: 0;}.view-loading {width: 100vw;height: 100vh;display: flex;justify-content: center;align-items: center;position: absolute;background-image: linear-gradient(45deg,#2c3540,#455260);top: 0;left: 0;}@keyframes spinner-rotate {0% { transform:rotate(0deg); }100% { transform:rotate(270deg); }} @keyframes spinner-dash {0% { stroke-dashoffset:88px; }50% {stroke-dashoffset:22px;transform: rotate(135deg);}100% {stroke-dashoffset:88px;transform: rotate(450deg);}}.spinner { transform: translate(0, 0); }.spinner > svg {animation: spinner-rotate 1.4s linear infinite;width: auto}.spinner circle {stroke-dasharray: 88px;stroke-dashoffset: 0;transform-origin:center;animation:spinner-dash 1.4s ease-in-out infinite;stroke-width:1;stroke-linecap:round;stroke:#f1f1f1;}
             </style>
             <div class="spinner">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" ratio="1">
