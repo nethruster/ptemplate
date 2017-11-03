@@ -24,6 +24,9 @@ A personal website template that's not a pain in the ass to setup and use.
 
 Note: To apply all of these changes you must rebuild the app.
 
+### If you're not hosting the app at the root of the server
+Go to `webpack.config.js` and change the `publicPath` key inside of the `output` part of the config
+
 ### Favicons
 You can replace them at `src/assets/icons/`.
 
