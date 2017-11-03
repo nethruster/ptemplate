@@ -17,6 +17,10 @@
         width: 100%;
         min-width: 100px;
     }
+
+    .pt-content-card__body__work-items__item__image {
+        flex: .7;
+    }
 }
 
 @media (max-width: 900px) {

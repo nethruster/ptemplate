@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-export default function(text) {
+export default function (text) {
   return text
   .split('\n')
-  .map((line, key) => <span key={key}>{line}<br/></span>);
+  .map((line, key) => <span key={key}>{line}<br /></span>)
 }

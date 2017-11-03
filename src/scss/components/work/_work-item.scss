@@ -32,8 +32,13 @@
 
         &__image {
             max-height: 100%;
+            max-width: 100%;
+            flex: 2;
+            min-width: 100px;
             align-self: center;
-            flex: .5;
+            img {
+                padding: var(--base-pm);
+            }
         }
 
         &__data {

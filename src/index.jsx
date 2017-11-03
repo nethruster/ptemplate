@@ -1,23 +1,23 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-import './assets-imports.js';
+import './assets-imports.js'
 
-import ContentCard from './components/content-card.jsx';
+import ContentCard from './components/content-card.jsx'
 
 if (module.hot) {
-  require('preact/debug');
+  require('preact/debug')
 }
 
 class App extends React.Component {
-  render() {
+  render () {
     return (
       <BrowserRouter>
         <ContentCard />
       </BrowserRouter>
-    );
+    )
   }
 }
 
-render(<App />, document.getElementById('pt-app'));
+render(<App />, document.getElementById('pt-app'))
