@@ -3,6 +3,8 @@
 
 A personal website template that's not a pain in the ass to setup and use.
 
+[Demo](https://ptemplate.nethruster.com)
+
 ### Requirements
 - You need to have `yarn` (**recommended**) or `npm` installed.
 
