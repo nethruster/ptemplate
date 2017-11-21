@@ -6,9 +6,9 @@
     transform: translateZ(0); // Force 3d rendering
 
     label {
-        padding: calc(var(--base-pm) / 2) calc(var(--base-pm) * 4);
-        margin: calc(var(--base-pm) / 2) 0;
-        border-radius: calc(var(--base-br) / 2);
+        padding: $base-pm / 2 $base-pm * 4;
+        margin: $base-pm / 2 0;
+        border-radius: $base-br / 2;
         position: relative;
 
         &:hover { background-color: transparentize(darken(#fff, 5%), .2); }
@@ -34,7 +34,7 @@
 
         &__text {
             font-weight: 300;
-            margin-left: calc(var(--base-pm) * 2);
+            margin-left: $base-pm * 2;
             width: 100%;
         }
 
@@ -55,8 +55,8 @@
         .md__checkbox-check {
             position: relative;
             display: inline-block;
-            width: var(--md-checkbox-size);
-            height: var(--md-checkbox-size);
+            width: $md-checkbox-size;
+            height: $md-checkbox-size;
             border: 2px solid;
             border-radius: 2px;
             overflow: hidden;
@@ -80,7 +80,7 @@
                 0 0 0 0,
                 0 0 0 0,
                 0 0 0 0 inset;
-            animation: checkbox-off var(--md-checkbox-animation-check) forwards ease-out;
+            animation: checkbox-off $md-checkbox-animation-check forwards ease-out;
         }
     }
 
@@ -96,7 +96,7 @@
             0px 32px 0 20px,
             -5px 5px 0 10px,
             20px -12px 0 11px;
-        animation: checkbox-on var(--md-checkbox-animation-check) forwards ease-out;
+        animation: checkbox-on $md-checkbox-animation-check forwards ease-out;
     }
 }
 

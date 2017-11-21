@@ -8,15 +8,15 @@
         font-size: 1.3em;
         font-weight: 500;
         text-align: center;
-        padding: calc(var(--base-pm) * 2);
+        padding: $base-pm * 2;
     }
 
     .pt-content-card__body__404 {
         div {
             background-color: #fff;
-            border-radius: var(--base-br);
-            padding: var(--base-pm) calc(var(--base-pm) * 4);
-            margin: calc(var(--base-pm) * 4);
+            border-radius: $base-br;
+            padding: $base-pm $base-pm * 4;
+            margin: $base-pm * 4;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
             cursor: pointer;
             transition: box-shadow .3s ease;

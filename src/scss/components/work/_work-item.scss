@@ -2,7 +2,7 @@
     flex: 2;
     height: 100%;
     flex-wrap: wrap;
-    padding: calc(var(--base-pm) * 2);
+    padding: $base-pm * 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 130px;
@@ -13,11 +13,11 @@
         background-color: #fff;
         max-width: 485px;
         height: 110px;
-        border-radius: var(--base-br);
+        border-radius: $base-br;
         overflow: hidden;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
         transition: all .3s;
-        margin: var(--base-pm) 0;
+        margin: $base-pm 0;
         justify-self: center;
         animation: fadeIn;
         animation-duration: .4s;
@@ -37,12 +37,12 @@
             min-width: 100px;
             align-self: center;
             img {
-                padding: var(--base-pm);
+                padding: $base-pm;
             }
         }
 
         &__data {
-            padding: var(--base-pm);
+            padding: $base-pm;
             flex: 5;
 
             h4 { font-weight: 400; }
@@ -59,10 +59,10 @@
                 span {
                     font-size: .7em;
                     background-color: rgba(0,0,0,.05);
-                    border-radius: calc(var(--base-br) * 2);
-                    padding: calc(var(--base-pm) / 2.5) calc(var(--base-pm) / 1.5);
+                    border-radius: $base-br * 2;
+                    padding: $base-pm / 2.5 $base-pm / 1.5;
 
-                    &:not(:last-child) { margin-right: var(--base-pm); }
+                    &:not(:last-child) { margin-right: $base-pm; }
                 }
             }
         }

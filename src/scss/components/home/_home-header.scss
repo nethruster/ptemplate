@@ -1,12 +1,12 @@
 &__header {
     position: relative;
     height: 300px;
-    background-color: var(--pt-content-card-header-background);
-    color: var(--pt-content-card-background);
+    background-color: $pt-content-card-header-background;
+    color: $pt-content-card-background;
 
     &__background {
         position: absolute;
-        fill: var(--pt-content-card-background);
+        fill: $pt-content-card-background;
         bottom: -1px;
         width: 100%;
         height: 3vw;

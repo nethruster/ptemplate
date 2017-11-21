@@ -1,12 +1,12 @@
 &__header--nav {
     height: 64px;
-    padding: 0 calc(var(--base-pm) * 2);
+    padding: 0 $base-pm * 2;
     box-shadow: 0 3px 12px rgba(0,0,0,0.16), 0 3px 12px rgba(0,0,0,0.23);
     z-index: 100;
 
     &__icon {
         background-color: transparentize(#fff, .9);
-        border-radius: var(--base-br);
+        border-radius: $base-br;
 
         svg { width: 30px; }
     }
@@ -18,7 +18,7 @@
 
         svg {
             width: 32px;
-            margin-right: var(--base-pm);
+            margin-right: $base-pm;
         }
 
         h2 {

@@ -9,17 +9,17 @@
 }
 
 .loader {
-    margin-left: var(--base-pm);
+    margin-left: $base-pm;
 }
 
 .loader span{
     display: inline-block;
-    width: var(--loaderPointSize);
-    height: var(--loaderPointSize);
+    width: $loaderPointSize;
+    height: $loaderPointSize;
     border-radius: 100%;
     background-color: currentColor;
 
-    &:not(:last-child) { margin-right: calc(var(--base-pm) / 2); }
+    &:not(:last-child) { margin-right: $base-pm / 2; }
 }
 
 .loader span:nth-child(1){ animation: opacitychange 1s ease-in-out infinite; }

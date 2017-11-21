@@ -8,7 +8,7 @@
         font-size: 1.2em;
         height: 64px;
         font-weight: 400;
-        padding: calc(var(--base-pm) * 4) calc(var(--base-pm) * 4) 0 calc(var(--base-pm) * 4);
+        padding: $base-pm * 4 $base-pm * 4 0 $base-pm * 4;
 
     }
 

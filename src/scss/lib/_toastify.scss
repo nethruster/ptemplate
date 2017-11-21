@@ -36,8 +36,8 @@
 }
 
 .toastify--bottom-left {
-    bottom: var(--base-pm);
-    left: var(--base-pm); 
+    bottom: $base-pm;
+    left: $base-pm; 
 }
 
 .toastify__close {
@@ -65,8 +65,8 @@
 .toastify-content {
     position: relative;
     min-height: 48px;
-    padding: var(--base-pm);
-    border-radius: var(--base-br);
+    padding: $base-pm;
+    border-radius: $base-br;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);
     background-color: #323232;
     color: #f1f1f1;
@@ -75,9 +75,9 @@
     max-height: 800px;
     overflow: hidden;
     font-family: sans-serif;
-    padding: calc(var(--base-pm) * 1.5);
+    padding: $base-pm * 1.5;
 
-    &:not(:last-child) { margin-bottom: var(--base-pm); }
+    &:not(:last-child) { margin-bottom: $base-pm; }
 }
 
 .toastify__body { 

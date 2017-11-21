@@ -1,9 +1,9 @@
 .pt-content-card {
     width: 100%;
     height: 100%;
-    max-width: var(--pt-content-card-max-width);
-    max-height: var(--pt-content-card-max-height);
-    border-radius: var(--base-br);
+    max-width: $pt-content-card-max-width;
+    max-height: $pt-content-card-max-height;
+    border-radius: $base-br;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
     @import '../home/home-header';
@@ -11,7 +11,7 @@
 
     &__body {
         flex: 1;
-        background-color: var(--pt-content-card-background);
+        background-color: $pt-content-card-background;
 
         @import '../home/home-body';
         @import '../about/about-body';

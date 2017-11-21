@@ -1,30 +1,28 @@
-:root {
-    // Global params
-    --pt-main-background: #e6e9f0;
-    --pt-main-background-gradient: linear-gradient(45deg,#2c3540,#455260);
+// Global params
+$pt-main-background: #e6e9f0;
+$pt-main-background-gradient: linear-gradient(45deg,#2c3540,#455260);
 
-    --base-br: 4px; // Base border radius
-    --base-pm: 8px; // Base padding/margin
+$base-br: 4px; // Base border radius
+$base-pm: 8px; // Base padding/margin
 
-    // Components
-    --pt-content-card-max-width: 1250px; // Content card max width
-    --pt-content-card-max-height: 650px; // Content card max height
-    --pt-content-card-background: #eef1f5; // Content card background
+// Components
+$pt-content-card-max-width: 1250px; // Content card max width
+$pt-content-card-max-height: 650px; // Content card max height
+$pt-content-card-background: #eef1f5; // Content card background
 
-    --pt-content-card-header-background: #303a45; // Content card header/nav background colour
+$pt-content-card-header-background: #303a45; // Content card header/nav background colour
 
-    //Material Desing Ripple
-    --md-checkbox-size: 20px;
-    --md-checkbox-animation-ripple: 700ms;
-    --md-checkbox-animation-check: 0.2s;
-    --md-lightbg-text: rgba(0,0,0,0.84);
+//Material Desing Ripple
+$md-checkbox-size: 20px;
+$md-checkbox-animation-ripple: 700ms;
+$md-checkbox-animation-check: 0.2s;
+$md-lightbg-text: rgba(0,0,0,0.84);
 
-    // Input line and validation params 
-    --input-color: #BFBFBF;
-    --input-color-focus: black;
-    --input-color-valid: #1DAF8D;
-    --input-color-error: #CC0000;
+// Input line and validation params 
+$input-color: #BFBFBF;
+$input-color-focus: black;
+$input-color-valid: #1DAF8D;
+$input-color-error: #CC0000;
 
-    // Loader params
-    --loaderPointSize: 4px; // scaling... any units
-}
+// Loader params
+$loaderPointSize: 4px; // scaling... any units

@@ -36,7 +36,7 @@
 
     .pt-content-card__body__contact,
     .pt-content-card__body__work,
-    .pt-content-card__body__about { margin-top: calc(var(--base-pm) * 8); }
+    .pt-content-card__body__about { margin-top: $base-pm * 8; }
 
     .pt-content-card__home-container--home { height: 100vh; }
 
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 700px) { 
-    .md__checkbox label { padding: var(--base-pm) calc(var(--base-pm) * 4); }
+    .md__checkbox label { padding: $base-pm $base-pm * 4; }
 
     .pt-content-card__header--nav {
         button { display: flex; }
@@ -83,7 +83,7 @@
         }
 
         &__list {
-            padding: var(--base-pm) 0;
+            padding: $base-pm 0;
             margin-top: 64px;
             overflow-y: scroll;
             height: calc(100% - 58px);
@@ -109,10 +109,10 @@
         }
 
         p {
-            padding: calc(var(--base-pm) * 2) 0;
-            background-color: var(--pt-content-card-header-background);
+            padding: $base-pm * 2 0;
+            background-color: $pt-content-card-header-background;
             text-align: center;
-            color: var(--pt-content-card-background);
+            color: $pt-content-card-background;
         }
     }
 
@@ -123,7 +123,7 @@
     .pt-content-card__body__about {
         display: block;
 
-        &__presentation { padding-top: calc(var(--base-pm) * 6); }
+        &__presentation { padding-top: $base-pm * 6; }
     }
 }
 
@@ -145,7 +145,7 @@
         max-width: none;
         border-radius: 0;
 
-        &:first-child { margin-top: calc(var(--base-pm) * 2); }
+        &:first-child { margin-top: $base-pm * 2; }
     }
 
     .pt-content-card__body__work-items__item__image { max-width: 100px; }
@@ -153,14 +153,14 @@
     .pt-content-card__body__work-items__item__buttons {
         flex-direction: row;
 
-        a { padding: calc(var(--base-pm) * 2); }
+        a { padding: $base-pm * 2; }
     }
 
     .pt-content-card__body__work-items__item__data__tags { display: none; }
 
     .pt-content-card__body__icons__icon {
         width: 72px;
-        margin-top: calc(var(--base-pm) * 3);
+        margin-top: $base-pm * 3;
     }
 }
 

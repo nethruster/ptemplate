@@ -6,7 +6,7 @@
     }
 
     &__presentation {
-        padding: calc(var(--base-pm) * 4);
+        padding: $base-pm * 4;
         
         img {
             max-width: 200px;
@@ -25,14 +25,14 @@
 
     &__details {
         p {
-            padding: calc(var(--base-pm) * 4);
+            padding: $base-pm * 4;
             @include transition_come-in(3);
         }
 
         h3 {
             font-weight: 400;
             font-size: 1.2em;
-            margin-top: calc(var(--base-pm) * 6);
+            margin-top: $base-pm * 6;
             @include transition_come-in(4);
         }
 
@@ -41,7 +41,7 @@
             grid-template-columns: auto auto;
             grid-template-rows: 100px;
             width: 100%;
-            padding: calc(var(--base-pm) * 3);
+            padding: $base-pm * 3;
             @include transition_come-in(4);
 
             a {

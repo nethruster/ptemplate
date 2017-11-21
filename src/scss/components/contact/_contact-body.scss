@@ -8,7 +8,8 @@
         min-width: 200px;
 
         a {
-            margin: calc(var(--base-pm) * 2) 0;
+            margin: $base-pm * 2 0;
+            width: 100%;
 
             @for $i from 1 through 10 {
                 &:nth-child(#{$i}) {
@@ -18,11 +19,10 @@
         }
 
         &__item {
-            padding: var(--base-pm) calc(var(--base-pm) * 2);
+            padding: $base-pm $base-pm * 2;
             min-width: 200px;
             background-color: darken(#fff, 5%);
-            justify-content: flex-start;
-            border-radius: var(--base-br);
+            text-align: center;
             
             svg { width: 22px; }
         }
@@ -40,13 +40,13 @@
         opacity: 1;
 
         form {
-            padding: calc(var(--base-pm) * 4);
+            padding: $base-pm * 4;
             width: 100%;
         }
 
         &__send-button {
             background-color: #303a45;
-            padding: var(--base-pm) calc(var(--base-pm) * 2);
+            padding: $base-pm $base-pm * 2;
             border-radius: 4px;
             color: #f1f1f1;
             text-transform: uppercase;
@@ -66,7 +66,7 @@
 
         &__row {
             position: relative;
-            margin: calc(var(--base-pm) * 2) 0;
+            margin: $base-pm * 2 0;
             max-width: 700px;
             width: 100%;
 
@@ -101,7 +101,7 @@
             .line {
                 width: 100%;
                 height: 2px;
-                stroke: var(--input-color);
+                stroke: $input-color;
                 stroke-width: 2px;
             }
             
@@ -113,18 +113,18 @@
                 stroke-dashoffset: -20;
             }
             
-            .line .focus { stroke: var(--input-color-focus); }
+            .line .focus { stroke: $input-color-focus; }
             
             .line .valid,
             .validation.valid {
-                stroke: var(--input-color-valid);
-                color: var(--input-color-valid);
+                stroke: $input-color-valid;
+                color: $input-color-valid;
             }
             
             .line .error,
             .validation.error {
-                stroke: var(--input-color-error);
-                color: var(--input-color-error);
+                stroke: $input-color-error;
+                color: $input-color-error;
             }
             
             input:focus ~ .line .focus,
@@ -142,7 +142,7 @@
             label.has-content {
                 top: -16px;
                 transform: scale(0.8) translateX(-40px);
-                color: var(--input-color);
+                color: $input-color;
             }
         }
     }
