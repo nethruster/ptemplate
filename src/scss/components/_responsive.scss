@@ -7,7 +7,6 @@
 
     .pt-content-card__body__work-items {
         display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
@@ -44,7 +43,7 @@
         width: 100%!important;
         margin: 0!important;
         bottom: 0px!important;
-    
+
         span {
             display: inline-block!important;
             width: 100vw!important;
@@ -53,7 +52,7 @@
     }
 }
 
-@media (max-width: 700px) { 
+@media (max-width: 700px) {
     .md__checkbox label { padding: $base-pm $base-pm * 4; }
 
     .pt-content-card__header--nav {
@@ -183,7 +182,7 @@
         bottom: 0;
         margin: 0;
 
-    } 
+    }
 
     .toastify-content {
         margin-bottom: 0;
@@ -200,9 +199,6 @@
     }
 }
 
-@media (max-height: 470px) { 
+@media (max-height: 470px) {
     .pt-content-card__body__work-items { flex-wrap: nowrap; }
 }
-
-
-
