@@ -6,12 +6,13 @@
   "author": "Nethruster <support@nethruster.com>",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack -p",
-    "build-gz": "webpack -p --env.compress"
+    "build": "webpack -p --mode production",
+    "build-gz": "webpack -p --mode production --env.compress"
   },
   "license": "MIT",
   "dependencies": {
     "ajax-promises": "^1.0.3",
+    "glamor": "^2.20.40",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
     "preact-grecaptcha": "^0.2.1",
@@ -23,6 +24,7 @@
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
+    "mini-css-extract-plugin": "^0.8.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
@@ -33,12 +35,13 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.5",
-    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
-    "webpack": "^3.5.4",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.1.11"
   }
 }
