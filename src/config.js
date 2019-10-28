@@ -84,7 +84,7 @@ const projects = [
   },
   {
     title: 'Project Title #3',
-    img: '',
+    img: 'https://www.nethruster.com/assets/img/wareader.svg',
     description: 'Lorem ipsum dolor sit amet, in nulla hendrerit ius, sed et congue graeci, qui id propriae accusata.',
     categories: ['Wat', 'Linux', 'LoL'],
     sourceCodeUrl: 'github.com/user/:O'
