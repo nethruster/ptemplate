@@ -55,3 +55,6 @@ Add new icon paths with the desired ID in the `src/assets/icons.svg` file.
 
 ## Usage
 Once everything is compiled and built the last step is to serve the contents of the `dist/` folder as static files with your web server of choice and you're done! 
+
+
+[![Run on Repl.it](https://repl.it/badge/github/nethruster/ptemplate)](https://repl.it/github/nethruster/ptemplate)
