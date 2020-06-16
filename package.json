@@ -11,6 +11,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "^7.10.2",
     "ajax-promises": "^1.0.3",
     "glamor": "^2.20.40",
     "preact": "^8.2.5",
@@ -21,14 +22,12 @@
     "react-toastify": "^2.0.0-rc.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
     "autoprefixer": "^7.1.2",
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-runtime": "^6.26.0",
+    "babel-loader": "^8.1.0",
     "compression-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",

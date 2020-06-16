@@ -1,8 +1,7 @@
 {
     "presets": [
-        "stage-0",
         [
-            "env",
+            "@babel/preset-env",
             {
                 "modules": false,
                 "targets": {
@@ -12,11 +11,10 @@
                 }
             }
         ],
-        "react"
+        "@babel/preset-react"
     ],
     "plugins": [
-        ["transform-runtime", {
-          "polyfill": false,
+        ["@babel/plugin-transform-runtime", {
           "regenerator": true
         }]
       ]
