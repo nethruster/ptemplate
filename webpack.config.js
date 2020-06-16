@@ -1,6 +1,5 @@
 const webpack = require('webpack')
   path = require('path'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   CompressionPlugin = require('compression-webpack-plugin'),
