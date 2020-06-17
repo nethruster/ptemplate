@@ -21,10 +21,10 @@ jobs:
       run: yarn build
     - name: Github Pages SPA support
       run: cp dist/index.html dist/404.html # Little hack to enable SPA in Github Pages
-     - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages 
-          FOLDER: dist 
-          CLEAN: true
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages 
+        FOLDER: dist 
+        CLEAN: true
