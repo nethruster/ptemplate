@@ -19,6 +19,7 @@ jobs:
       run: yarn install
     - name: Build website
       run: yarn build
+    - name: Github Pages SPA support
       run: cp dist/index.html dist/404.html # Little hack to enable SPA in Github Pages
     - name: Publish to GitHub Pages
       uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
