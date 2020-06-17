@@ -1,0 +1,50 @@
+{
+  "home": {
+    "about": "About me",
+    "about_alt": "About",
+    "work": "My Work",
+    "work_alt": "Work",
+    "contact": "Contact me",
+    "contact_alt": "Contact"
+  },
+  "about": {
+    "find_me": "You'll find me on:"
+  },
+  "work": {
+    "no_projects": "Whoops! There's nothing here yet!",
+    "categories": "Categories",
+    "category_all": "All",
+    "website": "Visit Website",
+    "source": "Source Code"
+  },
+  "contact": {
+    "toast": {
+      "close": "Close"
+    },
+    "form": {
+      "name": "What's your name?",
+      "email": "What's your email?",
+      "message": "Please, explain yourself:",
+      "validation": {
+        "invalid_name": "Invalid name",
+        "invalid_email": "Invalid email",
+        "invalid_message": "Invalid message",
+        "invalid_grecaptcha": "Invalid gRecaptchaResponse",
+        "server_error": "Server returned an invalid response",
+        "conection_error": "Connection Error",
+        "success": "Message sent successfully"
+      }
+    },
+    "loading": "Loading",
+    "send": "Send",
+    "sending": "Sending"
+  },
+  "404": {
+    "back_404": "Go home",
+    "text": "Sorry, I can't find the page you're looking for...",
+    "button_text": "Do you want help to return home?"
+  },
+  "misc": {
+    "back": "Go back"
+  }
+}

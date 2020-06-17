@@ -1,0 +1,50 @@
+{
+  "home": {
+    "about": "Sobre mi",
+    "about_alt": "Quién soy",
+    "work": "Mi trabajo",
+    "work_alt": "Trabajo",
+    "contact": "Contacte conmigo",
+    "contact_alt": "Contacto"
+  },
+  "about": {
+    "find_me": "Me encontrará en:"
+  },
+  "work": {
+    "no_projects": "¡Ostras! ¡Aún no hay nada por aquí!",
+    "categories": "Categorías",
+    "category_all": "Todo",
+    "website": "Visitar página",
+    "source": "Código fuente"
+  },
+  "contact": {
+    "toast": {
+      "close": "Cerrar"
+    },
+    "form": {
+      "name": "¿Cómo se llama?",
+      "email": "¿Cuál es su correo electrónico?",
+      "message": "Por favor, escriba su mensaje:",
+      "validation": {
+        "invalid_name": "Nombre no válido",
+        "invalid_email": "Correo electrónico no válido",
+        "invalid_message": "Mensaje no válido",
+        "invalid_grecaptcha": "gRecaptchaResponse no válido",
+        "server_error": "El servidor ha retornado una respuesta inválida",
+        "conection_error": "Error de conexión",
+        "success": "Mensaje enviado con éxito"
+      }
+    },
+    "loading": "Cargando",
+    "send": "Enviar",
+    "sending": "Enviando"
+  },
+  "404": {
+    "back_404": "Ir al inicio",
+    "text": "Lo siento, no se ha podido encontrar la página que busca...",
+    "button_text": "¿Quiere que le ayude a volver al inicio?"
+  },
+  "misc": {
+    "back": "Volver atrás"
+  }
+}

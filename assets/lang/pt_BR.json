@@ -1,0 +1,50 @@
+{
+  "home": {
+    "about": "Sobre mim",
+    "about_alt": "Sobre",
+    "work": "Meus projetos",
+    "work_alt": "Projetos",
+    "contact": "Contato",
+    "contact_alt": "Contato"
+  },
+  "about": {
+    "find_me": "Você irá me encontrar aqui:"
+  },
+  "work": {
+    "no_projects": "Ooops! Não há nada aqui ainda!",
+    "categories": "Categorias",
+    "category_all": "Todos",
+    "website": "Visitar site",
+    "source": "Código fonte"
+  },
+  "contact": {
+    "toast": {
+      "close": "Fechar"
+    },
+    "form": {
+      "name": "Qual é o seu nome?",
+      "email": "Qual é o seu e-mail?",
+      "message": "Por favor, fale mais sobre você:",
+      "validation": {
+        "invalid_name": "Nome inválido",
+        "invalid_email": "E-mail inválido",
+        "invalid_message": "Mensagem inválida",
+        "invalid_grecaptcha": "Erro obtido: gRecaptchaResponse",
+        "server_error": "Servidor retornou uma resposta inválida",
+        "conection_error": "Erro de conexão",
+        "success": "Mensagem enviada com sucesso"
+      }
+    },
+    "loading": "Loading",
+    "send": "Send",
+    "sending": "Sending"
+  },
+  "404": {
+    "back_404": "Go home",
+    "text": "Sorry, I can't find the page you're looking for...",
+    "button_text": "Do you want help to return home?"
+  },
+  "misc": {
+    "back": "Go back"
+  }
+}
