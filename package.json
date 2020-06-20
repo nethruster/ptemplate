@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server",
     "build": "webpack -p --mode production",
     "build-gz": "webpack -p --mode production --env.compress",
-    "pre-render": "rimraf ./dist && npm run build && react-snap"
+    "build-render": "find dist -type f -type d -not -name '.gitkeep' -delete ; npm run build && npm run pre-render",
+    "pre-render": "react-snap"
 
   },
   "license": "MIT",
