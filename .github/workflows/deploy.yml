@@ -18,9 +18,7 @@ jobs:
     - name: Install dependencies
       run: yarn install
     - name: Build website
-      run: yarn build
-    - name: Pre-Render
-      run: yarn pre-render
+      run: yarn build-render
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
