@@ -1,2 +1,2 @@
-language = "java10"
-run = "run"
+language = "NodeJS"
+run = "yarn dev"
