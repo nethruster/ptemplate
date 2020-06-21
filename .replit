@@ -1,2 +1,1 @@
-language = "NodeJS"
 run = "yarn dev"
