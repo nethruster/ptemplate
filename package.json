@@ -16,7 +16,10 @@
   "reactSnap": {
     "source": "dist",
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
-    "minifyHtml": { "sortClassName": false }
+    "minifyHtml": {
+      "sortClassName": false,
+      "removeComments": true
+    }
   },
   "dependencies": {
     "@babel/runtime": "^7.10.2",
