@@ -6,6 +6,7 @@ const webpack = require('webpack')
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
   isProduction = process.argv.indexOf('-p') !== -1 // Check if we are in production mode
 
+const BASE_URL="/" 
 const BUILD_DIR = path.resolve(__dirname, 'dist')
 const APP_DIR = path.resolve(__dirname, 'src')
 
@@ -27,7 +28,7 @@ module.exports = env => {
     },
     output: {
       path: BUILD_DIR,
-      publicPath: '/',
+      publicPath: BASE_URL,
       filename: '[name].js',
       chunkFilename: '[name].js'
     },
@@ -52,7 +53,7 @@ module.exports = env => {
         {
           test: /\.(png|jpg|jpeg|gif|svg|ico|xml)$/,
           loader: 'file-loader',
-          options: {name: 'assets/[name].[ext]?[hash]'}
+          options: {name: '/assets/[name].[ext]?[hash]'}
         }
       ]
     },
@@ -61,6 +62,9 @@ module.exports = env => {
       'modules': [APP_DIR + '/assets/lang/', 'node_modules']
     },
     plugins: [
+      new webpack.DefinePlugin({
+        __BASE__: JSON.stringify(BASE_URL) 
+      }),
       new MiniCssExtractPlugin({
         filename: '[name]-[hash:6].css',
         chunkFilename: '[name]-[hash:6].css',

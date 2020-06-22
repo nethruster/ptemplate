@@ -13,7 +13,7 @@ if (module.hot) {
 class App extends React.Component {
   render () {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={__BASE__.slice(0, -1)}>
         <ContentCard />
       </BrowserRouter>
     )
@@ -31,3 +31,4 @@ if (typeof Promise !== 'undefined' && Promise.toString().indexOf('[native code]'
   window.alert('Please, use an updated browser like Google Chrome or Firefox if you want to use this website properly.')
   console.error('This browser doesn\'t support necessary web technology for this site to work, please, use an updated browser like Google Chrome or Firefox if you want to use this website properly.')
 }
+

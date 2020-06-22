@@ -34,7 +34,8 @@ Example screenshot
 Note: To apply all of these changes you must rebuild the app.
 
 ### If you're not hosting the app at the root of the server
-Go to `webpack.config.js` and change the `publicPath` key inside of the `output` part of the config
+Go to `webpack.config.js` and change the constant `BASE_URL`, be sure it ends with a `/`.  
+**PRE-RENDER DOESN'T WORK WITH CUSTOM BASE_URL**
 
 ### Favicons
 You can replace them at `src/assets/icons/`.
