@@ -39,7 +39,7 @@ You can replace them at `src/assets/icons/`.
 You can replace it at `src/assets/`. If the name or the extension is different to "avatar.svg", you need to modify it in `src/config.js` and `src/assets-imports.js`.
 
 ### Title
-Change the <title> tag in `src/index.html`.
+Change the `<title>` tag in `src/index.html`.
 
 ### Most of the UI (description, work content, contact icons...)
 Modify `src/config.js`. You can add, remove or modify its contents.
@@ -55,6 +55,25 @@ Add new icon paths with the desired ID in the `src/assets/icons.svg` file.
 
 ## Usage
 Once everything is compiled and built the last step is to serve the contents of the `dist/` folder as static files with your web server of choice and you're done! 
+
+## Form API
+The form of the contact page are sended to the address specified in `src/config.js` as `formUrl`. The request have:
+* Method: `POST`
+* Header: `Content-Type: "application/json; charset=UTF-8"`
+* Body:
+```json
+{
+    "name": "Name introduced in the form",
+    "mail": "Email introduced in the form",
+    "msg": "Text/Message introduced in the form",
+    "g-recaptcha-response": "Google's reCAPTCHA v2 response for server-side validation"
+}
+```
+You can implement your own backend, or use any of the compatible backends listed below
+
+### Compatible form backends
+* [web-msg-handler](https://github.com/Miguel-Dorta/web-msg-handler)
+
 
 
 [![Run on Repl.it](https://repl.it/badge/github/nethruster/ptemplate)](https://repl.it/github/nethruster/ptemplate)
