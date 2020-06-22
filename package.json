@@ -7,9 +7,20 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack -p --mode production",
-    "build-gz": "webpack -p --mode production --env.compress"
+    "build-gz": "webpack -p --mode production --env.compress",
+    "build-render": "rm -R dist ; npm run build && npm run pre-render",
+    "pre-render": "react-snap"
+
   },
   "license": "MIT",
+  "reactSnap": {
+    "source": "dist",
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "minifyHtml": {
+      "sortClassName": false,
+      "removeComments": true
+    }
+  },
   "dependencies": {
     "@babel/runtime": "^7.10.2",
     "ajax-promises": "^1.0.3",
@@ -35,6 +46,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "postcss-loader": "^2.0.6",
+    "react-snap": "^1.23.0",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
     "style-loader": "^0.19.0",

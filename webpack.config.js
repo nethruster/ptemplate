@@ -12,9 +12,7 @@ const APP_DIR = path.resolve(__dirname, 'src')
 module.exports = env => {
   const config = {
     mode: isProduction ? 'production' : 'development',
-    entry: {
-      'main': APP_DIR + '/index.jsx'
-    },
+    entry: {'main': APP_DIR + '/index.jsx'},
     target: 'web',
     optimization: {
       splitChunks: {
@@ -44,44 +42,23 @@ module.exports = env => {
     },
     module: {
       rules: [
-        {
-          test: /\.jsx?$/,
-          include: APP_DIR,
-          loader: 'babel-loader'
-        },
-        {
+        {test: /\.jsx?$/, include: APP_DIR, loader: 'babel-loader'}, {
           test: /\.scss$/,
-            use: [
-              MiniCssExtractPlugin.loader,
-              {
-                loader: 'css-loader'
-              },
-              {
-                loader: 'postcss-loader'
-              },
-              {
-                loader: 'sass-loader'
-              }
-            ]
-          },
+          use: [
+            MiniCssExtractPlugin.loader, {loader: 'css-loader'},
+            {loader: 'postcss-loader'}, {loader: 'sass-loader'}
+          ]
+        },
         {
           test: /\.(png|jpg|jpeg|gif|svg|ico|xml)$/,
           loader: 'file-loader',
-          options: {
-            name: 'assets/[name].[ext]?[hash]'
-          }
+          options: {name: 'assets/[name].[ext]?[hash]'}
         }
       ]
     },
     'resolve': {
-      'alias': {
-        'react': 'preact-compat',
-        'react-dom': 'preact-compat'
-      },
-      'modules': [
-        APP_DIR + '/assets/lang/',
-        'node_modules'
-      ]
+      'alias': {'react': 'preact-compat', 'react-dom': 'preact-compat'},
+      'modules': [APP_DIR + '/assets/lang/', 'node_modules']
     },
     plugins: [
       new MiniCssExtractPlugin({
@@ -91,11 +68,8 @@ module.exports = env => {
         hot: true
       }),
       new webpack.HotModuleReplacementPlugin(),
-      new webpack.NoEmitOnErrorsPlugin(),
-      new HtmlWebpackPlugin({
-        minify: {
-          collapseWhitespace: true
-        },
+      new webpack.NoEmitOnErrorsPlugin(), new HtmlWebpackPlugin({
+        minify: {collapseWhitespace: true, removeComments: true},
         hash: true,
         template: './src/index.html'
       })

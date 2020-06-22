@@ -18,9 +18,7 @@ jobs:
     - name: Install dependencies
       run: yarn install
     - name: Build website
-      run: yarn build
-    - name: Github Pages SPA support
-      run: cp dist/index.html dist/404.html # Little hack to enable SPA in Github Pages
+      run: yarn build-render
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

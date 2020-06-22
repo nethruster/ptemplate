@@ -18,12 +18,16 @@ Example screenshot
 - `yarn dev` - Launch local web server with hot compiling. Ideal to work on the project easily.
 - `yarn build` - Build the website in production mode to the `dist/` folder.
 - `yarn build-gz` - Builds a gzip compressed version of the built app in the dist/ folder.
+- `yarn build-render` - Build the website in production mode and pre-render it to the `dist/` folder.
+- `yarn pre-render` - Pre-renders the previously built website.
 
 #### NPM
 - `npm install` - Install and update dependencies.
 - `npm run dev` - Launch local web server with hot compiling. Ideal to work on the project easily.
 - `npm run build` - Build the website in production mode to the `dist/` folder.
 - `npm run build-gz` - Builds a gzip compressed version of the built app in the dist/ folder.
+- `npm run build-render` - Build the website in production mode and pre-render it to the `dist/` folder.
+- `npm run pre-render` - Pre-renders the perviously built website.
 
 ## Customization
 
