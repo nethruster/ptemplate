@@ -25,16 +25,16 @@ function validateGRecaptchaResponse (gRecaptchaResponse) {
 
 async function sendData (name, email, message, gRecaptchaResponse) {
   let postData = JSON.stringify({
-    name,
-    email,
-    message,
+    'name': name,
+    'mail': email,
+    'msg': message,
     'g-recaptcha-response': gRecaptchaResponse
   })
 
   return fetch(formUrl, {
-    method: 'post',
+    method: 'POST',
     headers: {
-      'Content-type': 'application/json; charset=UTF-8'
+      'Content-Type': 'application/json; charset=UTF-8'
     },
     body: postData
   })
@@ -63,6 +63,7 @@ function sendToForm (name, email, message, gRecaptchaResponse) {
         if (response.status >= 200 && response.status < 300) {
           resolve(String(langContext.success))
         } else {
+          // Responses 1xx, 3xx or 4xx shouldn't be reported as server_error
           reject(String(langContext.server_error))
         }
       })
