@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { render } from 'preact'
 import { BrowserRouter } from 'react-router-dom'
 
 import './assets-imports.js'
@@ -13,7 +13,7 @@ if (module.hot) {
 class App extends React.Component {
   render () {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={__BASE__.slice(0, -1)}>
         <ContentCard />
       </BrowserRouter>
     )
@@ -21,8 +21,14 @@ class App extends React.Component {
 }
 
 if (typeof Promise !== 'undefined' && Promise.toString().indexOf('[native code]') !== -1) {
-  render(<App />, document.getElementById('pt-app'))
+  const root = document.getElementById('pt-app')
+  if (root.hasChildNodes) {
+    render(<App />, root, root.firstElementChild)
+  } else {
+    render(<App />, root)
+  }
 } else {
   window.alert('Please, use an updated browser like Google Chrome or Firefox if you want to use this website properly.')
   console.error('This browser doesn\'t support necessary web technology for this site to work, please, use an updated browser like Google Chrome or Firefox if you want to use this website properly.')
 }
+

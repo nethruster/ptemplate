@@ -7,7 +7,7 @@ export default class Icon extends React.PureComponent {
     } : null
 
     return (
-      <svg style={iconStyle} viewBox='0 0 24 24'><use xlinkHref={`assets/icons.svg#${this.props.iconName}`} /></svg>
+      <svg style={iconStyle} viewBox='0 0 24 24'><use xlinkHref={`${__BASE__}assets/icons.svg#${this.props.iconName}`} /></svg>
     )
   }
 }
