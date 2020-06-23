@@ -93,7 +93,9 @@ const projects = [
 
 const formUrl = 'http://localhost:4000'
 const ReCAPTCHAKey = '6LcBOC8UAAAAAM9YRyBp1RR-1NnwvMU8UDsR63Vu'
-const missingProjectIcon = './assets/no-work-icon.jpg'
+// The basepath is the assets folder
+/// the file sould be imported in assets-import.js
+const missingProjectIcon = 'no-work-icon.jpg'
 
 export {
   profile,
