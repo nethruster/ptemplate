@@ -46,7 +46,7 @@ export default class WorkItem extends React.PureComponent {
     return (
       <div className='pt-content-card__body__work-items__item flex'>
         <div className='pt-content-card__body__work-items__item__image flex flex-full-center'>
-          <img src={this.props.work.img || missingProjectIcon} alt={`${this.props.work.title} Icon`} />
+          <img src={this.props.work.img || `${__BASE__}assets/${missingProjectIcon}`} alt={`${this.props.work.title} Icon`} />
         </div>
         <div className='pt-content-card__body__work-items__item__data flex flex-dc flex-sb'>
           <h4>{this.props.work.title}</h4>
