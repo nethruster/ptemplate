@@ -63,7 +63,6 @@ function sendToForm (name, email, message, gRecaptchaResponse) {
         if (response.status >= 200 && response.status < 300) {
           resolve(String(langContext.success))
         } else {
-          // Responses 1xx, 3xx or 4xx shouldn't be reported as server_error
           reject(String(langContext.server_error))
         }
       })
