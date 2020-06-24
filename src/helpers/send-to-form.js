@@ -25,16 +25,16 @@ function validateGRecaptchaResponse (gRecaptchaResponse) {
 
 async function sendData (name, email, message, gRecaptchaResponse) {
   let postData = JSON.stringify({
-    name,
-    email,
-    message,
+    'name': name,
+    'mail': email,
+    'msg': message,
     'g-recaptcha-response': gRecaptchaResponse
   })
 
   return fetch(formUrl, {
-    method: 'post',
+    method: 'POST',
     headers: {
-      'Content-type': 'application/json; charset=UTF-8'
+      'Content-Type': 'application/json; charset=UTF-8'
     },
     body: postData
   })

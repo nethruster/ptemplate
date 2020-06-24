@@ -30,7 +30,7 @@
         "invalid_email": "Invalid email",
         "invalid_message": "Invalid message",
         "invalid_grecaptcha": "Invalid gRecaptchaResponse",
-        "server_error": "Server returned an invalid response",
+        "server_error": "Server reported an error",
         "conection_error": "Connection Error",
         "success": "Message sent successfully"
       }
