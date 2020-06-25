@@ -160,7 +160,7 @@ export default class ContactBody extends React.PureComponent {
     return (
       <div className="pt-content-card__body pt-content-card__body__contact flex">
       {
-        this.state.ReCAPTCHA ? 
+        this.state.ReCAPTCHA && navigator.userAgent != "ReactSnap" ? 
           <this.state.ReCAPTCHA
             ref={(el) => {this.captcha = el}}
             className="recaptcha"
