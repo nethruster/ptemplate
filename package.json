@@ -10,12 +10,14 @@
     "build-gz": "webpack -p --mode production --env.compress",
     "build-render": "rm -R dist ; npm run build && npm run pre-render",
     "pre-render": "react-snap"
-
   },
   "license": "MIT",
   "reactSnap": {
     "source": "dist",
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "minifyHtml": {
       "sortClassName": false,
       "removeComments": true
@@ -49,6 +51,7 @@
     "react-snap": "^1.23.0",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",
+    "script-ext-html-webpack-plugin": "^2.1.4",
     "style-loader": "^0.19.0",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.3.9",

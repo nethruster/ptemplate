@@ -4,6 +4,7 @@ const webpack = require('webpack')
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   CompressionPlugin = require('compression-webpack-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin'),
   isProduction = process.argv.indexOf('-p') !== -1 // Check if we are in production mode
 
 const BASE_URL="/" 
@@ -72,12 +73,19 @@ module.exports = env => {
         hot: true
       }),
       new webpack.HotModuleReplacementPlugin(),
-      new webpack.NoEmitOnErrorsPlugin(), new HtmlWebpackPlugin({
+      new webpack.NoEmitOnErrorsPlugin(),
+      new HtmlWebpackPlugin({
         minify: {collapseWhitespace: true, removeComments: true},
         hash: true,
         template: './src/index.html'
-      })
+      }),
     ]
+  }
+
+  if (env && env["defer-scripts"]) {
+    config.plugins[config.plugins.length] = new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: "defer",
+    });
   }
 
   if (isProduction) {
