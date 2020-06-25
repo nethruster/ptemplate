@@ -26,7 +26,7 @@ fromDir('dist', /\.html$/, (filename) => {
   fs.writeFile(
       filename,
       data.replace(
-          /<script charset="utf-8" src="(.+)"><\/script>/g,
+          /<script charset="utf-8" src="([^"]+)"><\/script>/g,
           '<link rel="preload" href="$1" as="script">'),
       err => {
         if (err) {
