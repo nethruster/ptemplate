@@ -18,7 +18,7 @@ function fromDir(startPath, filter, callback) {
 };
 
 fromDir('dist', /\.html$/, (filename) => {
-  console.log('Adding defer to chunks in ' + filename)
+  console.log('processing ' + filename)
   fs.readFile(filename, 'utf8', (err, data) => {
   if (err) {
     console.error(`Error reading file "${filename}": `, err)
@@ -26,8 +26,8 @@ fromDir('dist', /\.html$/, (filename) => {
   fs.writeFile(
       filename,
       data.replace(
-          /<script charset="utf-8" src=/g,
-          '<script charset="utf-8" defer src='),
+          /<script charset="utf-8" src="(.+)"><\/script>/g,
+          '<link rel="preload" href="$1" as="script">'),
       err => {
         if (err) {
           console.error(`Error writing file "${filename}": `, err)
