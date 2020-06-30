@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server",
     "build": "webpack -p --mode production",
     "build-gz": "webpack -p --mode production --env.compress",
-    "build-render": "rm -R dist ; npm run build && npm run pre-render",
+    "build-render": "rm -Rf dist ; npm run build && npm run pre-render",
     "pre-render": "react-snap && node scripts/chunks-scripttag-to-preload.js"
 
   },
