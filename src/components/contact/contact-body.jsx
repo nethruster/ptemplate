@@ -118,7 +118,7 @@ export default class ContactBody extends React.PureComponent {
 
   render() {
     const socialIcons = profile.social.map((element, i) => (
-      <a href={element.url} key={i} target="_blank" title={element.iconName}>
+      <a href={element.url} key={i} rel="noopener" target="_blank" title={element.iconName}>
         <div className="pt-content-card__body__contact__social__item flex flex-full-center"><Icon iconName={element.iconName} />&nbsp;{element.text}</div>
       </a>
     ));
