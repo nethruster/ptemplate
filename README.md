@@ -62,7 +62,7 @@ Add new icon paths with the desired ID in the `src/assets/icons.svg` file.
 Once everything is compiled and built the last step is to serve the contents of the `dist/` folder as static files with your web server of choice and you're done! 
 
 ## Form API
-The form of the contact page is sended to the address specified in `src/config.js` as `formUrl`. The request have:
+The form of the contact page is sent to the address specified in `src/config.js` as `formUrl`. The request has:
 * Method: `POST`
 * Header: `Content-Type: "application/json; charset=UTF-8"`
 * Body:
